@@ -1,0 +1,217 @@
+Changes in version 1.6.3 - 12-10-15
+
+   o Addapt installation for IFB Cloud VM
+   o Correction of different bugs
+
+*********************************
+
+Changes in version 1.6.1 - 11-03-15
+
+   o In config-ncrna.txt : 2 news variables
+	-> PROJECT_NAME
+	-> FILTER_ZERO_COUNTS : filter zero counts option
+		if set to 1, miRNAs that do have in at least one sample a count above zore in the count files
+		if set to 0, all miRNAs in the count files
+   o Pdf report
+   o piRNA.gff (pirnabank and/or piRBase)
+   o all_samples_all_subfamcov.data and all_samples_all_subfamcov_RPM.data files : file with all sequences found (precursor miRNA, piRNA, Rfam, Rmsk and coding gene) and read count for all samples. This file is compatible with DESeq or EdgeR.
+   o Create SAMPLE.unmapped file in data folder. 
+   o mm9/mm10/hg19 : miRBase v21, Rfam v11.0
+   o Update R graphics
+   o Correction of different bugs
+
+
+*********************************
+Changes in version 1.6.0
+
+NEW FEATURES
+
+   o Add combined profile figure (plotCombinedFamProfile)
+   o Add heatmap figure with fixed number of highest expressed subfamilies (plotExpDynamic)
+   o Add function to compute distribution of distance between reads in each ncRNA/repeat family (sRNA_distance).
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+   o Update ncpro graphical output   
+   o Update installation process to search for dependency in the config-system.txt file during installation
+   o Add ggplots R package in the requierement
+   o Change Make file to let it be able to process repeat consensus sequence or genome without mirna, trna...annotations
+
+BUG FIXES
+
+   o Fix bug in ncRNA selection based on keyword
+
+ 
+*********************************
+Changes in version 1.5.1  - 19-09-12
+
+SIGNIFICANT USER-VISIBLE CHANGES
+   
+   o Change long command to short command to be able to process lots of ncrna at the same time
+
+BUG FIXES
+
+   o Fix bug in RPM normalisation for miRNAs
+   o Fix bug in UCSC tracks
+   o Add error tracking on the local web interface
+   o Fix the bug of dealing "*.fa" in buildhtml
+
+
+*********************************
+Changes in version 1.5.0  - 08-08-12
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+   o Update manual   
+
+*********************************
+Changes in version 1.4.1
+    
+SIGNIFICANT USER-VISIBLE CHANGES
+
+   o Add mm10 annotation files
+   o Add error tracking on the local web interface
+   o Add check_install.sh script. After ncPRO installation, this script allows to run a test case on a small sample in order to check the installation of the command-line version.
+   o Add install_all.sh script to automatically installed most of the dependencies. All but R and Apache are installed. The config-system.txt file is created at the end of the installation.
+   o Change intersectbam_rmskgff by first removing reads annotated as ncRNA (rfam). Otherwise, overestimation of repeats counts because some ncRNA (for instance, mir-28) overlap some repeted elements
+   o Back to previous annotation overview (with minor changes) for memory reason
+
+BUG FIXES
+
+   o Bug corrections in Makefile
+
+*********************************
+Changes in version 1.4.0
+   
+NEW FEATURES
+
+   o New way to generate the annotation overview (annotateReads.pl)
+   o Add DESeq section in Makefile, and new variable (LIBRARY_GROUP) in config-ncrna.txt
+
+*********************************
+Changes in version 1.3.1 - 07-10-12
+
+BUG FIXES
+
+   o Bug fixed : read_anno
+   o Bug fixed : processBam
+
+*********************************
+Changes in version 1.3.0 - 05-31-12
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+   o Update manual   
+
+*********************************
+Changes in version 1.2.4
+
+NEW FEATURES
+
+   o Add the new Arabidopsis rmsk gff
+   o Separate BED tracks to sens and antisens tracks
+   o Output both bed and bedgraph track for each ncrna
+   o Add scripts to process read and bam files locally for users who want to use online version
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+   o Change input bam processing
+   o Update installation process
+   o bed track for ncrna is now displayed as %
+
+BUG FIXES
+
+   o Fix bug, Discrepency between BED and BEDgraph
+   o Fix bug. Help display in report.html
+
+*********************************
+Changes in version 1.2.3
+
+NEW FEATURES
+
+   o Update of the online/web version
+   o Repeats profiling : selection of full length elements via the interface (NS)
+   o Updates of the config files and Makefile
+   o Option group=2, for alread processed data
+   o Annotation version in the html report
+   o Clean data folder after analysis
+   o PBS management system for online version
+
+*********************************
+Changes in version 1.2.2
+
+NEW FEATURES
+
+  o First online version
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+  o Update ncpro website
+
+*********************************
+Changes in version 1.2.1
+
+BUG FIXES
+
+  o Minor bugs correction
+
+*********************************
+Changes in version 1.2.0
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+  o UCSC tracks - changes in the scale 
+  o UCSC tracks - bugs in UCSC zoom is solve 
+  o Logo sequences - use N information
+
+*********************************
+Changes in version 1.1.0 - 02-01-12
+
+NEW FEATURES
+
+   o Clean up web interface.
+   o Changes in web interface :
+     x Update link to cgi-bin
+     x Update list of available organism using a list file generated during installation
+     x Improve mail cgi-bin and log files
+     x Bugs
+   o Add read annotation overview table and figure
+   o Put related tables below each figure, and remove them from table tab
+   o Tabs organization according per ncRNAs not by sample. 
+   o New annotations released. 
+Human - hg19, Mouse - mm9, A. Thaliana - TAIR9, C. Elegans - ce6, Chicken - galGal3, D. melanogaster - dm3, Cow - bosTau4, Dog - canFam2, Horse - equCab2, Macaca - rheMac2, Opossum - monDom5, Platypus - ornAna1, Zebrafinch - taeGut1, Zebrafish - Zv9 , Rat-rn4
+   o Bugs correction for v1.0
+   o Put all the logo plots on the same pic
+   o Repeats : use the repeatmasker track but take into account the repeats position and length according to the consensus.
+   o Add percentage of uniquely/multiple mapped reads on the R output
+   o Plot all the logo (all/sens/antisens) on the same figure. Add the IC_SCALE option in the config file
+   o Correct some color space bugs
+   o In each run, keep the same Y axis for all samples to display base coverage in each ncRNA/repeat familiy 
+   o To handle the problem of different of full length size ncRNA/repeat from the same family, the full length of each ncRNA/repeat-related consensus sequence is scaled to 1000, and reads that are mapped to this ncRNA/truncated repeat are caculated corresponding position and coverage in the scaled region. For displaying, the median size of all full length ncRNA/repeat consensus sequences is used to replace 1000 in x axis, and the corresponding size for position 200,400,600 and 800 are also calculated and shown in the figure.
+   o For repeatMasker annotation,  extended items will only work on full length repeats
+   o Modify the way to generate repeatMasker gff file to add repeat locations in consensus sequence
+   o Logo version with Letters
+   o Normalisation (RPM) of all ncRNA count in bed file
+   o Remove miRNAs from RFAM
+   o Keep only Exp values for Rfam/repeat overview outputs
+   o Normalize reads count (RPM) for UCSC visualization
+   o Merge sense and antisense bed file from significant region analyses into one bed with strand information
+   o Set grouping as an option for both raw read input and bam file input
+   o HTML report version 1.0
+   o Create the checkConfig.sh script to check the system path of the tools used by the pipeline. Add the systemCheck option to the makefile.
+   o Change annotation organization. Update of all human and mouse annotation files
+   o ProcessReads.pl. Check the raw data input format
+   o Change plotRfamClassOverviewCt.R to have the same colors in Exp and Ct outputs
+   o Add the mirna_stat command to generate the barplot with the percentage of annotated miRNAs
+   o Change the plotSingleFamInfo.R plots. Merge the size distribution plots in one graph
+   o Change the output names of ncrna_ucsc_track. 'plus/minus' changed in 'sens/antisens'
+   o famReadCov.pl command line. Add the field "ID" to work with the miRNA precursor gff file
+   o Force the langage 'export LANG=C' in the configuration file to avoid problems with the decimal forat in awk outputs
+   o Move the Rfam and Rmsk anntoted bed from the $(BOWTIE_RESULTS_DIR) to $(DATA)
+   o Move all the Rout in the $(LOGS_DIR) directory
+   o Add options to accept bam files as input 
+   o Fix the bug in generating mapped read sequence by using extractMapRead.pl
+   o Make a few small changes of the section orgnization in the pipeline
+   o Add two scripts to annotation/parseAnnotationFiles/generate_rfamGff/ which could be used to generate rfam annotation file for new genome version
+   o Add Athaliana rfam annotation file for TAIR9.0
+

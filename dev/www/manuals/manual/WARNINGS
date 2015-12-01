@@ -1,0 +1,10 @@
+No implementation found for style `graphicx'
+No implementation found for style `hyperref'
+No implementation found for style `multirow'
+No implementation found for style `subfigure'
+No implementation found for style `xcolor'
+No implementation found for style `textpos'
+
+Substitution of arg to newlabelxx delayed.
+
+manual.tex is newer than manual.bbl: Please rerun latex and bibtex.

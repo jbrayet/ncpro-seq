@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Extension parameters</TITLE>
+<META NAME="description" CONTENT="Extension parameters">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node33.html">
+<LINK REL="previous" HREF="node31.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node33.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html526"
+  HREF="node33.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html522"
+  HREF="node30.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html516"
+  HREF="node31.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html524"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html527"
+  HREF="node33.html">miRNAs read proportion</A>
+<B> Up:</B> <A NAME="tex2html523"
+  HREF="node30.html">Reads annotation</A>
+<B> Previous:</B> <A NAME="tex2html517"
+  HREF="node31.html">Reads with multiple mapping</A>
+ &nbsp; <B>  <A NAME="tex2html525"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00064200000000000000"></A>
+<A NAME="subsubsection:extension"></A>
+<BR>
+Extension parameters
+</H3>
+There are four types of extended items which can be used to modify coordinates according to the pattern <code>\_[iest]\_[+-]Number\_[+-]Number</code>, as illustrated in Figure&nbsp;<A HREF="#fig:coordinatemod">11</A>: 
+
+<OL>
+<LI><SPAN  CLASS="textbf">_i_[+-]N1_[+-]N2</SPAN>: shorten [+-]N1 bp at 5' end, [+-]N2 bp at 3' end
+</LI>
+<LI><SPAN  CLASS="textbf">_e_[+-]N1_[+-]N2</SPAN>: extend [+-]N1 bp at 5' end, [+-]N2 bp at 3' end 
+</LI>
+<LI><SPAN  CLASS="textbf">_s_[+-]N1_[+-]N2</SPAN>: get coordinates for sub-region from position N1 to N2 indexed from 5' end 
+</LI>
+<LI><SPAN  CLASS="textbf">_t_[+-]N1_[+-]N2</SPAN>: get coordinates for sub-region from position N1 to N2 indexed from 3' end
+</LI>
+</OL>
+
+<DIV ALIGN="CENTER"><A NAME="fig:coordinatemod"></A><A NAME="488"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11:</STRONG>
+The four types of modification based on the original coordinates</CAPTION>
+<TR><TD><IMG
+ WIDTH="676" HEIGHT="199" BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{figure}
+\setlength{\unitlength}{5cm}
+\begin{picture}(3,1)(0,0.1)
+\color{...
+...\_+N2\_+N3}$}
+\put(2.74,0.78){$\emph{\_e\_+N1\_+N4}$}
+\end{picture}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Note that for repeat annotation, extension operations will only perform on the full length repeat in the genome. That means repeat items in the <code>NCRNA_RMSK_EX</code> option (see <A HREF="node11.html#subsection:configure">3.1</A>) if it is specified will only select untruncated repeats to do the modification and analyses. Repeats representing <SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$ &gt;=90\%$"></SPAN> of its consensus sequence are considered as full length/untruncated repeats.
+<BR>
+<BR>
+Here, we show two examples of extension parameters use:
+<DL>
+<DT><STRONG>Annotate reads in mature miRNAs.</STRONG></DT>
+<DD>Due to the inaccurate processing of precursor miRNAs by Dicer or downstream miRNA remodelling, mature miRNAs often have end heterogeneities comparing to their annotations in miRBase. Thus, when analyzing mature miRNAs, it is necessary to extend miRNA annotation several bases (e.g. 2 bases) in both upstream and downstream region, which can be easily done in ncPRO-seq by using <SPAN  CLASS="textbf">miRNA_e_+2_+2</SPAN>.
+ 
+</DD>
+<DT><STRONG>Analyse tRNA-derived small RNAs (tsRNAs).</STRONG></DT>
+<DD>It has been reported that tRNA can be processed again into different types of small RNAs probably through different mechanisms. To check read profiles of these small RNA families, you can specify the following options to <SPAN  CLASS="textbf">TRNA_UCSC</SPAN> separated by comma: <SPAN  CLASS="textbf">tRNA_e_+0_+50</SPAN> (overview of all tsRNAs), <SPAN  CLASS="textbf">tRNA_s_+0_+26</SPAN> (tsRNAs at very 5' end), <SPAN  CLASS="textbf">tRNA_s_+0_+40</SPAN> (including tsRNAs from tRNA anti-codon stem cleavage) and <SPAN  CLASS="textbf">tRNA_t_+0_+50</SPAN> (tsRNAs from 3' tail of precursor tRNAs).
+ 
+</DD>
+</DL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html526"
+  HREF="node33.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html522"
+  HREF="node30.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html516"
+  HREF="node31.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html524"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html527"
+  HREF="node33.html">miRNAs read proportion</A>
+<B> Up:</B> <A NAME="tex2html523"
+  HREF="node30.html">Reads annotation</A>
+<B> Previous:</B> <A NAME="tex2html517"
+  HREF="node31.html">Reads with multiple mapping</A>
+ &nbsp; <B>  <A NAME="tex2html525"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Nicolas Servant
+2012-05-31
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+.Gtree, .tree{
+	//-moz-border-radius: 5px;
+	//-webkit-border-radius: 5px;
+
+}
+
+.Gtree, .tree, .ArboHaut{
+	//opacity: 0.9;
+	background-color: #DDDDDD;
+	width: 700px;
+}
+
+.Gtree, .tree, .ArboHaut, .ahref{
+	color: #4B4B4B;
+}
+
+.Gtree{
+	position: absolute;
+	//top: 40%;
+	//left: 5%;
+	height: 340px;
+	//padding-left: 15px;
+	border: 2px solid #ccc;
+}
+
+.tree{
+	height: 300px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.ArboHaut{
+	height:34px;
+	padding-top: 4px;
+}
+
+.pathMan{
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.img, .browse{
+	vertical-align: middle;
+	border: none;
+}
+
+.browse{
+	position: absolute;
+	left: 130px;		
+}
+
+.ahref{
+	text-decoration: none;
+}

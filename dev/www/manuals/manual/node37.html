@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Logo sequences</TITLE>
+<META NAME="description" CONTENT="Logo sequences">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node38.html">
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node38.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html586"
+  HREF="node38.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html582"
+  HREF="node30.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html576"
+  HREF="node36.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html584"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html587"
+  HREF="node38.html">Read coverage in each</A>
+<B> Up:</B> <A NAME="tex2html583"
+  HREF="node30.html">Reads annotation</A>
+<B> Previous:</B> <A NAME="tex2html577"
+  HREF="node36.html">Read profiling in each</A>
+ &nbsp; <B>  <A NAME="tex2html585"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00064700000000000000"></A>
+<A NAME="subsubsection:logo"></A>
+<BR>
+Logo sequences
+</H3>
+It is interesting to investigate the base bias in distinct reads from each annotation family, which might give hints about how these small RNAs are processed. In ncPRO-seq, we calculate the frequencies of bases at each position of distinct reads and plot them in http://www.bioconductor.org/packages/2.2/bioc/html/seqLogo.html sequence logos [<A
+ HREF="node51.html#OliverseqLogo">2</A>]. Sequence logos can be drawn with respect to 5' end or 3' end of reads depending on the choice of <SPAN  CLASS="textbf">5</SPAN> or <SPAN  CLASS="textbf">3</SPAN> in <code>LOGO_DIRECTION</code> option. Users can choose their favourite way to display sequence logos, either with uniform column heights, or with column heights proportional to informaion content. (<code>IC_SCALE</code> option). 
+<BR>
+<BR>
+For each annotation family, ncPRO-seq provides two types of sequence logos figures by using different subsets of distinct reads. In one figure, all distinct reads in annotation family are used to create sequence logos, which will give you the processing information of small RNAs like piRNAs that can be produced from various positions in a single region. In another figure, only the distinct read with the highest abundance in each family member is used, which is the case for small RNAs like miRNAs that are accurately processed by enzymes from some special loci. 
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html586"
+  HREF="node38.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html582"
+  HREF="node30.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html576"
+  HREF="node36.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html584"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html587"
+  HREF="node38.html">Read coverage in each</A>
+<B> Up:</B> <A NAME="tex2html583"
+  HREF="node30.html">Reads annotation</A>
+<B> Previous:</B> <A NAME="tex2html577"
+  HREF="node36.html">Read profiling in each</A>
+ &nbsp; <B>  <A NAME="tex2html585"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Nicolas Servant
+2012-05-31
+</ADDRESS>
+</BODY>
+</HTML>

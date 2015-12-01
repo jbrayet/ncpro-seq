@@ -1,0 +1,179 @@
+# Please change the variable settings below if necessary
+#########################################################################
+## Local Paths - Default folders
+#########################################################################
+
+RAW_DIR = rawdata
+DATA_DIR = data
+DOC_DIR = doc
+PIC_DIR = pic
+UCSC_DIR = ucsc
+LOGS_DIR = logs
+PRO_GFF_DIR = processed_gff
+BOWTIE_RESULTS_DIR = bowtie_results
+ANNOT_DIR = annotation
+HTML_DIR = html
+
+#######################################################################
+## System settings
+#######################################################################
+
+N_CPU = 1
+LOGFILE = pipeline.log
+
+#######################################################################
+## Bowtie options
+## Three types of fastq format are supported:phred33, solexa, solexa1.3
+#######################################################################
+
+FASTQ_FORMAT = solexa1.3
+BOWTIE_GENOME_REFERENCE = mm9
+BOWTIE_GENOME_REFERENCE_CS = 
+BOWTIE_GENOME_OPTIONS_CS = 
+BOWTIE_GENOME_OPTIONS_FQ =  -e 50 -a -m 20 --best --strata --nomaqround -y
+BOWTIE_GENOME_OPTIONS_FA = 
+
+#######################################################################
+## Group read options
+#if set to 1, group reads before performing analyses which would dramatically reduce computing time 
+#and save disk space
+#if set to 0, don't group reads
+#######################################################################
+
+GROUP_READ = 1
+
+#######################################################################
+## Annotation files
+#######################################################################
+ORGANISM = mm9
+ANNO_CATALOG = annotation/mm9/precursor_miRNA.gff annotation/mm9/rfam.gff annotation/mm9/rmsk.gff annotation/mm9/coding_gene.gff
+
+#######################################################################
+## ncRNA from Rfam
+# Different ncRNA names should be separated by comma
+# ACA_snoRNA represents box H/ACA snoRNA families
+# CD_snoRNA represents box CD snoRNA families
+# ncRNA names with original coordinates are assigned to NCRNA_RFAM
+# ncRNA names followed by an extended item are assigned to NCRNA_RFAM
+# There are four types of extended items which are used to modify coordinates: 
+# _[iest]_[+-]Number_[+-]Number
+# 1. _i_[+-]N1_[+-]N2: shorten [+-]N1 bp at 5' end, [+-]N2 bp at 3' end
+# 2. _e_[+-]N1_[+-]N2: extend [+-]N1 bp at 5' end, [+-]N2 bp at 3' end 
+# 3. _s_[+-]N1_[+-]N2: get coordinates for sub-region from position N1 to N2 indexed from 5' end 
+# 4. _t_[+-]N1_[+-]N2: get coordinates for sub-region from position N1 to N2 indexed from 3' end
+#
+# ex :
+# NCRNA_RFAM = ACA_snoRNA,CD_snoRNA
+#######################################################################
+
+
+NCRNA_RFAM = ACA_snoRNA
+NCRNA_RFAM_EX = 
+
+
+#######################################################################
+## miRNA from miRBase
+# Different ncRNA names should be separated by comma
+# Both miRNA with and without an extended item as explicated above are acceptable
+#
+# ex :
+# MATURE_MIRNA = miRNA_e_+2_+2
+# PRECURSOR_MIRNA = miRNA
+#######################################################################
+
+MATURE_MIRNA = miRNA_e_+2_+2
+PRECURSOR_MIRNA = 
+
+#######################################################################
+## tRNA from UCSC
+# Different ncRNA names should be separated by comma
+# Both tRNA with and without an extended item as explicated above are acceptable
+#
+# ex :
+# TRNA_UCSC = tRNA,tRNA_e_+30_+30
+#######################################################################
+
+TRNA_UCSC =
+
+#######################################################################
+## ncRNA from RepeatMasker
+# Different ncRNA names should be separated by comma
+# ncRNA names with original coordinates are assigned to NCRNA_RMSK
+# ncRNA names followed by an extended item as explicated above are assigned to NCRNA_RMSK
+#
+# ex :
+# NCRNA_RMSK = L1Md_T,L1
+# NCRNA_RMSK_EX = L1Md_T_s_-199_+0,L1_s_-199_+0
+#######################################################################
+
+NCRNA_RMSK =
+NCRNA_RMSK_EX = 
+
+#######################################################################
+## ncRNA from other source
+# User could input other ncRNA annotation files (gff3 format) to do analysis
+# Different gff3 files separated by comma or space could be given in OTHER_NCRNA_GFF
+#######################################################################
+
+OTHER_NCRNA_GFF = 
+
+#######################################################################
+## direction to compute base matrix for reads and draw logo (5 or 3)
+## 5: 5'->3'              
+## 3: 3'->5'
+## Use Information Content scale instead of probability.
+## IC_SCALE = 0/1 FALSE/TRUE
+#######################################################################
+
+LOGO_DIRECTION = 3
+IC_SCALE = 1
+
+#######################################################################
+## settings to generate ucsc tracks from genome mapping results 
+# Four parameters should be provided to filter reads, and separated by comma
+# 1. min_len=N : the minimum length of read
+# 2. max_len=N : the maximum length of read
+# 3. min_copy=N : the minimum number of matches in the genome
+# 4. max_copy=N : the maximum number of matches in the genome
+# To have more than one type of track, different settings should be separated by pipe.
+#
+# ex :
+# GENOME_TRACK_OPTIONS = min_len=19,max_len=26,min_copy=1,max_copy=20 | min_len=19,max_len=26,min_copy=2,max_copy=20
+#######################################################################
+
+GENOME_TRACK_OPTIONS = min_len=19,max_len=26,min_copy=1,max_copy=20
+
+#######################################################################
+## settings to extract regions not annotated as EXCLUDE_ANN_GFF (different gff3 files separted by space), but significantly enriched with reads
+# Four parameters as explicated above should be provided to filter reads, and separated by comma
+# Different sets of parameters should be separated by pipe
+# Set window (SIG_WIN_SIZE) and step (SIG_STEP_SIZE) to scan the whole genome to get distribution of reads not annotated in EXCLUE_ANN_GFF
+# Three models could be used to simulate read distribution: 
+# 1. NB.ML: negative binomial distribution inferred using maximum likelihood method (the fitdistr function in R package MASS)
+# 2. NB.012: negative binomial distribution inferred with windows with only 0, 1, or 2 aligned reads 
+# 3. Poisson: poisson distribution inferred with windows with only 0, 1, or 2 aligned reads
+# Set PVAL_CUTOFF to get significant regions
+#
+# ex :
+# SIG_READ_OPTIONS = min_len=19,max_len=26,min_copy=1,max_copy=1 | min_len=19,max_len=26,min_copy=2,max_copy=20
+# SIG_WIN_SIZE = 100000
+# SIG_STEP_SIZE = 50000
+# EXCLUDE_ANN_GFF = annotation/mm9/rfam.gff annotation/mm9/rmsk.gff annotation/mm9/mature_miRNA.gff
+# FIT_MODEL = NB.ML
+# PVAL_CUTOFF = 0.0001
+#######################################################################
+
+SIG_READ_OPTIONS = 
+SIG_WIN_SIZE = 
+SIG_STEP_SIZE = 
+EXCLUDE_ANN_GFF = 
+FIT_MODEL = 
+PVAL_CUTOFF =
+
+#######################################################################
+## Groups of libraries used in DESeq to scan differentially expressed genes 
+# Two groups of libraries are separated by space, libraries in each group are separated by comma
+#######################################################################
+
+LIBRARY_GROUP = 
+

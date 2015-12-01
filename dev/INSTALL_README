@@ -1,0 +1,46 @@
+***********************************
+** ncPRO-seq v1.6.1
+***********************************
+
+***********************************
+** Installation of ncPRO-seq
+***********************************
+
+0. Read the manual in the 'manual' folder or look at http://ncpro.curie.fr/manuals.html
+
+1. Make sure that R has been successfully installed in your system. If you want to use the interface version of ncPRO-seq, a local server with php is also required before the ncPRO-seq installation. 
+Please refer to section 7 in the manual for more details of these two softwares.
+
+
+2. Download and extract pre-built bowtie genome index files from bowtie website or build your own genome indexes by following the instructions in bowtie website. 
+The path of bowtie indexes will be demanded during the following ncPRO-seq installation.
+
+
+3. Download the source of the latest version of ncPRO-seq and annotation files of different species from sourceforge (http://sourceforge.net/projects/ncproseq/files/). 
+For example, we choose source code ncPRO-seq.v1.5.0.tar.gz from src folder and annotation file mouse mm9.tar.gz from annotation folder in the ncPRO-seq download page in sourceforge (http://sourceforge.net/projects/ncproseq/files/). 
+Then go to the directory where you save downloaded files in your shell prompt, do the following steps to extract files and to put annotation files into the source folder.
+   
+> tar -zxvf mouse_mm9.tar.gz
+> tar -zxvf ncPRO-seq.v1.6.1.tar.gz
+> mv mm9 ncPRO-seq.v1.6.1/annotation/
+
+
+4. Use the following command lines to semi-automatically install the command line version and/or the interface version of ncPRO-seq, as well as required softwares except R and the local server
+as mentioned in section 2.3 in the manual. During the installation, users need follow the guides to choose or input options. 
+Note that the installation requires super-user (use sudo) or root (use su - root) privileges. And make sure that you have access to internet at the shell prompt as a super-user or root.
+
+> cd ncPRO-seq.v1.6.1
+> sudo make install
+or
+> su
+> make install
+
+
+5. The user just has to run the following script to test the successful installation of ncPRO-seq.
+Note that you need change ncpro-install-dir to the path where you choose to install ncPRO-seq during the installation.
+
+> ./check_install.sh -p ncpro-install-dir
+
+
+Additional information at http://ncpro.curie.fr/index.html
+For any question, please contact bioinfo.ncproseq@curie.fr

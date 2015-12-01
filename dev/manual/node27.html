@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Read pre-processing</TITLE>
+<META NAME="description" CONTENT="Read pre-processing">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node28.html">
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html461"
+  HREF="node28.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html457"
+  HREF="node26.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html451"
+  HREF="node26.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html459"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html462"
+  HREF="node28.html">Alignment pre-processing</A>
+<B> Up:</B> <A NAME="tex2html458"
+  HREF="node26.html">Input pre-processing</A>
+<B> Previous:</B> <A NAME="tex2html452"
+  HREF="node26.html">Input pre-processing</A>
+ &nbsp; <B>  <A NAME="tex2html460"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00062100000000000000"></A>
+<A NAME="subsubsection:readpreprocess"></A>
+<BR>
+Read pre-processing
+</H3>
+ncPRO-seq supports input read sequences in three formats: <SPAN  CLASS="textbf">fastq</SPAN> from Solexa, <SPAN  CLASS="textbf">csfasta</SPAN> from SOLiD  and <SPAN  CLASS="textbf">fasta</SPAN> from 454. In this step, ncPRO-seq generates several figures for each sequencing library to describe the basic properties of sequencing reads, such as length distribution of distinct reads and abundant reads, positional base and GC content, and positional mean quality score if the read format is fastq, all of which are useful to access the basic quality of sequencing reads. Note that <SPAN  CLASS="textbf">distinct reads</SPAN> are read groups that only count once for reads with the same sequence, i.e. ignoring the read abundance, whereas <SPAN  CLASS="textbf">abundant reads</SPAN> are all sequenced reads. 
+<BR>
+<BR>
+There is an useful option in ncPRO-seq, called <code>GROUP_READ</code> (see <A HREF="node11.html#subsection:configure">3.1</A>), which controls the read clustering process. If it is set to 1, reads with identical sequence will be clustered into non-redundant read groups which are then specified with unique group id and read count. For reads in fastq format, the positional quality score of a read group is the mean positional quality score of all reads that are clustered in this group. In the following analyses, read groups, which has a significant decrease of read items comparing to the original read data, will be processed instead as input data. We recommend users to use this option especially if the sequencing libraries are extremely big, which will significantly reduce the CPU time for all analyses and the disk space as well to store intermediate results. Furthermore, another advantage of using this option is that you will get additional read profiles computed based on read groups (i.e. distinct reads) as shown in <A HREF="node36.html#subsubsection:readprofile">5.4.6</A> 
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html461"
+  HREF="node28.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html457"
+  HREF="node26.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html451"
+  HREF="node26.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html459"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html462"
+  HREF="node28.html">Alignment pre-processing</A>
+<B> Up:</B> <A NAME="tex2html458"
+  HREF="node26.html">Input pre-processing</A>
+<B> Previous:</B> <A NAME="tex2html452"
+  HREF="node26.html">Input pre-processing</A>
+ &nbsp; <B>  <A NAME="tex2html460"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

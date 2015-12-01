@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Installation of ncPRO-seq</TITLE>
+<META NAME="description" CONTENT="Installation of ncPRO-seq">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html210"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html206"
+  HREF="node5.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html202"
+  HREF="node8.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html208"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html211"
+  HREF="node10.html">How to use it</A>
+<B> Up:</B> <A NAME="tex2html207"
+  HREF="node5.html">Requirements and Installation</A>
+<B> Previous:</B> <A NAME="tex2html203"
+  HREF="node8.html">Required softwares</A>
+ &nbsp; <B>  <A NAME="tex2html209"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00034000000000000000">
+Installation of ncPRO-seq</A>
+</H2>
+
+<OL>
+<LI>Make sure that http://www.r-project.org/ R has been successfully installed in your system. If you want to use the interface version of ncPRO-seq, a local server with php is also required before the ncPRO-seq installation. Please refer to section <A HREF="node47.html#subsection:additional">7</A> for more details of these two softwares.
+</LI>
+<LI>Download and extract pre-built bowtie genome index files from ftp://ftp.cbcb.umd.edu/pub/data/bowtie_indexes/ bowtie website or build your own genome indexes by following the instructions in bowtie website. The path of bowtie indexes will be demanded during the following ncPRO-seq installation.
+</LI>
+<LI>Download the source of the latest version of ncPRO-seq and annotation files of different species from sourceforge (http://sourceforge.net/projects/ncproseq/files/). For example, we choose source code <SPAN  CLASS="textbf">ncPRO-seq.v1.6.1.tar.gz</SPAN> from src folder and annotation file <SPAN  CLASS="textbf">mouse_mm9.tar.gz</SPAN> from annotation folder in the ncPRO-seq http://sourceforge.net/projects/ncproseq/files/ download page in sourceforge. Then go to the directory where you save downloaded files in your shell prompt, do the following steps to extract files and to put annotation files into the source folder.
+<BR><PRE>
+&gt; tar -zxvf mouse_mm9.tar.gz
+&gt; tar -zxvf ncPRO-seq.v1.6.1.tar.gz
+&gt; mv mm9 ncPRO-seq.v1.6.1/annotation/
+</PRE>
+</LI>
+<LI>Use the following command lines to semi-automatically install the command line version and/or the interface version of ncPRO-seq, as well as required softwares except R and the local server as mentioned in section <A HREF="node8.html#subsection:prerequired">2.3</A>. During the installation, users need follow the guides to choose or input options. Make sure that you have access to internet at the shell prompt under current user's privilege.
+
+<P>
+Common users without super-user privileges can only install the command-line version of ncPRO-seq, as configurations of local web server need super-user permissions. The installation command is the following:
+<PRE>
+&gt; cd ncPRO-seq.v1.6.1
+&gt; make install
+</PRE>
+For the super-user or root user, the following commands can be used to install both command-line and local web server version of ncPRO-seq:
+<PRE>
+&gt; cd ncPRO-seq.v1.6.1
+&gt; sudo make install
+</PRE>
+or
+<PRE>
+&gt; su
+&gt; make install
+</PRE>
+</LI>
+<LI>The user just has to run the following script to test the successful installation of ncPRO-seq. Note that you need change <SPAN  CLASS="textbf">ncpro-install-dir</SPAN> to the path where you choose to install ncPRO-seq during the installation.
+
+<P>
+<PRE>
+&gt; ./check_install.sh -p ncpro-install-dir
+</PRE>
+</LI>
+</OL>
+
+<P>
+After the installation, the <code>config-system.txt</code> file is generated and can be found in the folder where you installed ncPRO-seq. This file lists all paths of environment and softwares required by the ncPRO-seq. Users are not recommened to make any changes in this file, unless you are an expert or are aware of some errors.
+
+<P>
+<A NAME="subsection:configsys"></A>
+<P>
+<DIV ALIGN="CENTER">
+1whitegray!20
+<A NAME="192"></A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 1:</STRONG>
+Paths in one example of config-system.txt</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>gray 
+<SPAN  CLASS="textbf">Options</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">Description</SPAN></TH>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=170><SPAN  CLASS="textbf">Example</SPAN></TH>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">INSTALL_WWW</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>0/1. If 1, the web interface of ncPRO-seq is installed in <SPAN  CLASS="textbf">WWW_DIR</SPAN> and <SPAN  CLASS="textbf">CGI_DIR</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>1</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">APPLI_DIR</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Absolute path of installation folder</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/home/ncPROseq/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">WWW_DIR</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>HTML installation folder. Have to be under the web working directory</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/var/www/ncPROseq/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">CGI_DIR</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>CGI installation folder. Have to be under the CGI working directory</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/lib/cgi-bin/ncPROseq/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">WWW_RES</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Results path for local web version</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/home/ncPROseq/www_results</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">PBS_MODE</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>0/1. If 1, the job are send to the PBS job scheduler using the <SPAN  CLASS="textit">qsub</SPAN> command</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>0</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">PBS_OPT</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Options to give to <SPAN  CLASS="textit">qsub</SPAN> at job submission</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>-m ae -M bioinfo.ncproseq@curie.fr -j oe -l nodes=1:ppn=6,mem=20gb</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">PBS_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Absolute path to PBS (qsub) command</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/bin</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">R_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Absolute path to R binary folder</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/local/R/R/bin/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">AWK_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Absolute path to awk executable folder</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/bin/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">BOWTIE_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Absolute path to bowtie executable folder</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/local/bowtie-0.12.7/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">BOWTIE_INDEXES_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Installation folder of Bowtie indexes</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/home/Apps/Bowtie_indexes/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">BEDTOOLS_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Installation folder of BedTools binaries</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/home/Apps/BEDTools-Version-2.15.0/bin/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">SAMTOOLS_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Installation folder of samtools binary</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/home/Apps/samtools/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">CONVERT_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Utilities used to create thumbnail for html report</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/bin/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">BAM_MAPCT_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Installation folder of the bamMapCount program. Distributed with the BEDTools-version10.0</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/home/Apps/BEDTools-Version-2.10.0/bin/</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">PERL_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Perl installation folder</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/local/bin</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=142><SPAN  CLASS="textbf">MAILX_PATH</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Optional - mailx excutable path to send email at the end of the analysis</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>/usr/bin/</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142><A NAME="tab:configsysoptions"></A></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html210"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html206"
+  HREF="node5.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html202"
+  HREF="node8.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html208"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html211"
+  HREF="node10.html">How to use it</A>
+<B> Up:</B> <A NAME="tex2html207"
+  HREF="node5.html">Requirements and Installation</A>
+<B> Previous:</B> <A NAME="tex2html203"
+  HREF="node8.html">Required softwares</A>
+ &nbsp; <B>  <A NAME="tex2html209"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

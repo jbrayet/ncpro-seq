@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+		<meta name="author" content="N. Servant and C. Chen">
+		<meta name="copyright" content="&copy; 2010 Institut Curie">
+		<title>ncPRO-seq Report</title>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="html/css/datatable_jui.css"/>
+		<link rel="stylesheet" type="text/css" href="html/css/ncpro.css"/>
+
+		<!-- Jquery -->
+		<link type="text/css" rel="stylesheet"  href="html/css/custom-theme/jquery-ui-1.8.17.custom.css"/>
+		<script type="text/javascript" src="html/js/jquery.js"></script>
+		<script type="text/javascript" src="html/js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="html/js/jquery-ui-1.8.17.custom.min.js"></script>
+
+		<!-- Lightbox -->
+		<script type="text/javascript" src="html/js/jquery.lightbox-0.5.js"></script>
+		<link rel="stylesheet" type="text/css" href="html/css/jquery.lightbox-0.5.css" media="screen" />
+
+		<!-- Data tables -->
+		<script type="text/javascript" src="html/js/jquery.dataTables.js"></script> 
+		<script type="text/javascript" src="html/js/jquery.csv.min.js"></script>
+
+		<!-- Functions -->
+		<script type="text/javascript">
+
+
+		  $(function() {
+		  $("#tabs").tabs();
+		  $("#tabs").tabs('select', 0);
+		  });
+
+	  
+		  $(function() {
+		  $('.gallery a.lb').lightBox({
+		  maxHeight: screen.height * 0.8,
+		  maxWidth: screen.height * 0.8 });
+		  });
+		  
+		  
+		  $(document).ready(function(){
+		  // hide browser onload
+		  cacheArbo();
+		  });
+		  
+		  
+var oTable;
+		  function showTable (selectid, tableid){
+		  $('#tableError').empty();
+
+		  var csvfile=$("#"+selectid+" option:selected").val()
+		  var getData=$.csv("\t");
+		  jQuery.get(csvfile, function(data) {
+		  var array = getData(data); 
+		  var columns = [];
+		  jQuery.each(array[0], function(i, value){
+		  var obj = { sTitle: value };
+		  columns.push(obj);
+		  });
+		  
+		  oTable = $("#"+tableid).dataTable({
+		  "aaData": array.slice(1, array.length),   
+		  "aoColumns": columns,
+		  "bJQueryUI": true, 
+		  "sPaginationType": "full_numbers", 
+		  "bDestroy": true,
+		  "sScrollX": "100%",
+		  "sScrollXInner": "110%",
+		  "bScrollCollapse": true
+		  //"sScrollY": "200px",
+		  //"bPaginate": false
+		  });
+		  document.getElementById('loading').style.display='none';
+		  });
+		  
+		  }
+
+		  function download (file){
+		  window.open(file,'Download');
+		  }
+
+		  function showTableLink (tableindex, filetoshow){
+		  $("#tabs").tabs('select', tableindex); // switch to third tab
+		  jQuery("select#maincsvfile option[selected]").removeAttr("selected");
+		  if (jQuery("select#maincsvfile option[value='"+filetoshow+"']").val()){
+		    jQuery("select#maincsvfile option[value='"+filetoshow+"']").attr("selected", "selected"); 
+		    showTable('maincsvfile', 'maintabdisplay');
+		  }else{
+		  $('#tableError').empty();
+	
+		  oTable.fnClearTable();
+		    $('#tableError').append("<p>Error : File '"+filetoshow+"' not found !</p>");
+		  }
+		  return false;
+		  
+		  }
+
+		</script>
+	
+	</head>
+
+	<body>
+	  <!-- BROWSER --> 
+	  <div id="Gtree" class="Gtree">
+	  </div>
+	

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Enrichment analysis</TITLE>
+<META NAME="description" CONTENT="Enrichment analysis">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node41.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html618"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html614"
+  HREF="node24.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html610"
+  HREF="node39.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html616"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html619"
+  HREF="node41.html">Annotation files</A>
+<B> Up:</B> <A NAME="tex2html615"
+  HREF="node24.html">How does-it work ?</A>
+<B> Previous:</B> <A NAME="tex2html611"
+  HREF="node39.html">Track files</A>
+ &nbsp; <B>  <A NAME="tex2html617"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00065000000000000000"></A>
+<A NAME="subsection:enrichmentanalysis"></A>
+<BR>
+Enrichment analysis
+</H2>
+ncPRO-seq has a special engine, which we call <SPAN  CLASS="textbf">enrichment analysis</SPAN>, to analyse reads that can not be annotated as known genomic features. Users can select different subsets of reads to perform this analysis by giving different sets of options to <code>SIG_READ_OPTIONS</code> (section <A HREF="node22.html#tab:configureoptions">3</A>). And reads that can be aligned to annotation regions given in <code>EXCLUDE_ANN_GFF</code> are excluded from enrichment analysis. Finally, we use the following steps to identify regions significantly enriched with remaining reads after filter steps.
+
+<P>
+
+<OL>
+<LI>Slide window of fixed size  (<code>SIG_WIN_SIZE</code>, e.g. 100,000) along the whole genome at fixed step (<code>SIG_STEP_SIZE</code>, e.g. 50,000)
+</LI>
+<LI>For each window, summarize read mapping information (number of mapped reads...)
+</LI>
+<LI>Fit number of mapped reads in all window to selected model to estimate expected read number distribution
+</LI>
+<LI>Compare real and expected read number distribution to determine P value for each window, thereby identify regions with significant numbers of mapped reads (<code>PVAL_CUTOFF</code>, e.g. 0.001)
+</LI>
+<LI>Finally generate tables containing read information and additional gene annotation of these regions. Track files in http://genome.ucsc.edu/FAQ/FAQformat.html#format1bed format are also created
+</LI>
+</OL>
+
+<P>
+There are three models that users can choose to do simulation and fit sliding window results: 
+
+<OL>
+<LI>NB.ML: negative binomial distribution inferred using maximum likelihood method
+</LI>
+<LI>NB.012: negative binomial distribution inferred using windows with only 0, 1, or 2 aligned reads
+</LI>
+<LI>Poisson: Poisson distribution inferred using windows with only 0, 1, or 2 aligned reads
+</LI>
+</OL>
+
+<P>
+For more details about these three models, please check the <code>addNBSignificance</code> function in http://www.bioconductor.org/packages/2.6/bioc/html/girafe.html girafe R package [<A
+ HREF="node51.html#Joern2010">16</A>].
+<BR>
+<P>
+In this step, three types of results are generated: figures displaying the distribution of sliding windows with different number of reads mapped and model simulation results, table files containing location, read mapping and annotation information of identified regions significantly enriched with reads, and track files in http://genome.ucsc.edu/FAQ/FAQformat.html#format1bed format.
+
+<P>
+Note that for small genomes and plant genomes, please choose small sliding window, as big window might lead to the problem of non-existance of window with less than 2 or 10 reads which is important for the model simulation.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html618"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html614"
+  HREF="node24.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html610"
+  HREF="node39.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html616"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html619"
+  HREF="node41.html">Annotation files</A>
+<B> Up:</B> <A NAME="tex2html615"
+  HREF="node24.html">How does-it work ?</A>
+<B> Previous:</B> <A NAME="tex2html611"
+  HREF="node39.html">Track files</A>
+ &nbsp; <B>  <A NAME="tex2html617"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Nicolas Servant
+2012-05-31
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Working with a new genome</TITLE>
+<META NAME="description" CONTENT="Working with a new genome">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node49.html">
+<LINK REL="up" HREF="node48.html">
+<LINK REL="next" HREF="node51.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html741"
+  HREF="node51.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html737"
+  HREF="node48.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html733"
+  HREF="node49.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html739"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html742"
+  HREF="node51.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html738"
+  HREF="node48.html">FAQ</A>
+<B> Previous:</B> <A NAME="tex2html734"
+  HREF="node49.html">Enabling CGI using XAMPP</A>
+ &nbsp; <B>  <A NAME="tex2html740"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00092000000000000000">
+Working with a new genome</A>
+</H2>
+
+<P>
+In ncPRO-seq, it is possible to do small RNA profiling analyses in a new genome without giving any known annotations (miRNA, tRNA, etc). For example, you want to work in yeast. What you need to do is:
+
+<OL>
+<LI>create the bowtie index of yeast genome with index name "yeast", put them in your Bowtie index folder
+</LI>
+<LI>create a folder "yeast" in MY_INSTALLATION_DIR/annotation directory
+</LI>
+<LI>create the "chrom.sizes" file of your yeast genome in MY_INSTALLATION_DIR/annotation/yeast folder. "chrom.sizes" is the reference idex file, which has two columns (name of chromosome and size of the chromosome) and can be generated using samtools 
+</LI>
+</OL>
+
+<P>
+
+<P>
+
+<BR><HR>
+<ADDRESS>
+Nicolas Servant
+2012-05-31
+</ADDRESS>
+</BODY>
+</HTML>

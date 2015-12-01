@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Read profiling in each family</TITLE>
+<META NAME="description" CONTENT="Read profiling in each family">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node37.html">
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html574"
+  HREF="node37.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html570"
+  HREF="node30.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html564"
+  HREF="node35.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html572"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html575"
+  HREF="node37.html">Logo sequences</A>
+<B> Up:</B> <A NAME="tex2html571"
+  HREF="node30.html">Reads annotation</A>
+<B> Previous:</B> <A NAME="tex2html565"
+  HREF="node35.html">Overview of repeat/Rfam</A>
+ &nbsp; <B>  <A NAME="tex2html573"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00064600000000000000"></A>
+<A NAME="subsubsection:readprofile"></A>
+<BR>
+Read profiling in each family
+</H3>
+Read profiling refers to the analysis of read profiles, which are represented by the distribution of positional read coverage and the read length distribution in annotation family. If the <code>GROUP_READ</code> option is activated,  for each annotation family, we will compute and plot two types of read profiles, by using abundant and distinct reads respectively, or else only read profiles based on abundant reads will be investigated. 
+<BR>
+<BR>
+In read profiles, three types of read coverage distribution, which are generated based on 5' end, 3' end and all positions of reads respectively, are displayed together to have a clear view of the biogenesis of small RNAs. Since annotated features belonging to the same single family might have different full length, we use a scaling strategy as shown in Figure <A HREF="#fig:scaling">12</A> to transform read positions in annotated items to corresponding positions in the scaled region. Using this strategy, we are able to sum up positional read coverages from different annotated features in a family, which are then normalized by the number of occurences of each feature position in the genome to obtain the average positional read coverage distribution. For repeat families, additional process is applied before the scaling step that is to locate the annotated repeat regions to the consensus sequence of its family, since repeats from some family like L1 in mouse are always truncated in the genome.  Note that the occurrence of read is normalized by the total number of either mapped abundant reads or mapped distinct reads to RPM (reads per million mapped reads) depending on the type of read profiles. We then plot the average read coverage distribution in the scaled region, and number the X-axis according to the median size of annotated items in the family.
+<BR>
+<BR>
+In each type of read profiles, relative length distributions of reads mapped in the sense, antisense and both direction of annotation family are plotted.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:scaling"></A><A NAME="525"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12:</STRONG>
+The scaling process</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="630" HEIGHT="197" ALIGN="BOTTOM" BORDER="0"
+ SRC="./scaling.png"
+ ALT="Image scaling">
+ 
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html574"
+  HREF="node37.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html570"
+  HREF="node30.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html564"
+  HREF="node35.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html572"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html575"
+  HREF="node37.html">Logo sequences</A>
+<B> Up:</B> <A NAME="tex2html571"
+  HREF="node30.html">Reads annotation</A>
+<B> Previous:</B> <A NAME="tex2html565"
+  HREF="node35.html">Overview of repeat/Rfam</A>
+ &nbsp; <B>  <A NAME="tex2html573"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Nicolas Servant
+2012-05-31
+</ADDRESS>
+</BODY>
+</HTML>

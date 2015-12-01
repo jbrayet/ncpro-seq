@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Command-line version</TITLE>
+<META NAME="description" CONTENT="Command-line version">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html383"
+  HREF="node23.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html379"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html375"
+  HREF="node21.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html381"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html384"
+  HREF="node23.html">How to browse the</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="node10.html">How to use it</A>
+<B> Previous:</B> <A NAME="tex2html376"
+  HREF="node21.html">Run the analysis</A>
+ &nbsp; <B>  <A NAME="tex2html382"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00043000000000000000"></A>
+<A NAME="subsection:commandline"></A>
+<BR>
+Command-line version
+</H2>
+The ncPRO-seq pipeline will generate a lot of output files. Thus before starting, it is highly recommended to deploy the ncPRO-seq output architecture.
+<BR>
+However, this step is <SPAN  CLASS="textbf">optional</SPAN>. If you don't want to use this output architecture, please change the output paths in the configuration files.
+To deploy the output architecture, use the following command:
+<PRE>
+$ MY_INSTALLATION_DIR/bin/ncPRO-deploy -o MY_OUTPUT_DIR
+</PRE>
+
+<P>
+The input (fastq, bam, csfasta or fasta) files must be filed in the rawdata folder.
+Finally, after setting the different parameters in the configuration file, run the ncPRO-seq pipeline as follow : 
+<PRE>
+$ cd MY_OUTPUT_DIR
+$ MY_INSTALLATION_DIR/bin/ncPRO-seq -c config-ncrna.txt
+</PRE>
+
+<P>
+The ncPRO-seq pipeline is modular and sequential. The user can specify the analysis steps to run.
+For instance, the following command line will just perform the quality control, the reads grouping, and the alignment on the reference genome.
+<PRE>
+$ MY_INSTALLATION_DIR/bin/ncPRO-seq -c config-ncrna.txt -s processRead 
+-s mapGenome -s mapGenomeStat
+</PRE>
+The following analysis steps are available:
+<DIV ALIGN="CENTER">
+1whitegray!20
+<A NAME="759"></A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 3:</STRONG>
+Description of ncPRO-seq '-s' options</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>gray 
+<SPAN  CLASS="textbf">ncPRO-seq analysis step (-s option)</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>processRead</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>calculate read length distribution, median quality score for each postion, and group reads</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>processBam</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>processed and group reads from bam files</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>mapGenome</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>run Bowtie for genome mapping</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>mapGenomeStat</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>compute number of mapped reads and unmapped reads in the genome</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>mapAnnOverview</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>compute overview of reads annotation</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>overviewRmsk</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>compute read coverage for each repeats family</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>overviewRfam</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>compute read coverage for each ncRNA family</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>generateNcgff</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>create gff file for special ncrna family</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>ncrnaProcess</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>ncRNA family analyses, including read coverage, read length distribution, read coverage in subfamilies, and sequence logo</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>genomeTracks</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>genreate genome coverage ucsc track</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>ncrnaTracks</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>genreate ucsc tracks for ncrna visualization</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>sigRegion</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>detect significantly enriched regions</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>html_builder</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>build the html report file</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><A NAME="tab:configureoptions"></A></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html383"
+  HREF="node23.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html379"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html375"
+  HREF="node21.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html381"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html384"
+  HREF="node23.html">How to browse the</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="node10.html">How to use it</A>
+<B> Previous:</B> <A NAME="tex2html376"
+  HREF="node21.html">Run the analysis</A>
+ &nbsp; <B>  <A NAME="tex2html382"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

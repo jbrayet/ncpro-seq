@@ -1,0 +1,29 @@
+body{
+	font-family: "Trebuchet MS";
+	font-size: 13px;
+	text-align: justify;
+}
+
+
+a:link{
+    color:#6168cc
+}
+a:visited{
+    color:#6168cc
+}
+
+a:hower{
+    color:#EAEBFF
+}
+
+table{
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+
+h1{
+	color: #606060;
+	text-align: center;
+	font-size: 18px;
+	padding: 0px;
+}

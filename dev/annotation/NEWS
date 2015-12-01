@@ -1,0 +1,20 @@
+********
+11-02-15
+********
+
+   o Update miRBase v21 : mm9, mm10, hg19
+   o Update Rfam v11 : mm9, mm10, hg19
+
+
+********
+08-01-12
+********
+
+   o Added mm10 annotations
+   o Update rmsk.gff file for Arabidopsis Thaliana
+
+********
+06-20-12
+********
+
+   o Update on mm9/rfam.gff, galGal3/mature_miRNA.gff, galGal3/precursor_miRNA.gff, to replace chrMT by chM

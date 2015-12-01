@@ -1,0 +1,75 @@
+#!/bin/bash
+
+NORMAL="\\033[0;39m" 
+RED="\\033[1;31m"
+
+function usage {
+    echo "Usage : deploy.sh -o output_dir"
+    exit;
+}
+
+if [ $# == 0 ]
+then
+    usage
+    exit
+fi
+
+# Parse the command line
+while [ $# -gt 0 ]
+  do
+  arg=$1
+  if [ $arg == "-o" ]
+      then 
+      shift
+      outdir=$1
+      shift
+  else
+      echo "Invalid argument: $arg"
+      usage
+  fi
+done
+
+if [[ -z "$outdir" ]]
+then
+    echo "Warnings : missing parameters"
+    usage
+    exit
+fi
+
+
+## Deploy output dir
+curpath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+#to also resolve any links to the script itself,
+#SOURCE="${BASH_SOURCE[0]}"
+#while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+#curpath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+mkdir -p $outdir ##|| { echo -e "$RED""Cannot create output directory - Check if the directory already exists or if you have rights to create it""$NORMAL"; exit 1; } 
+
+## Create architecture
+mkdir $outdir/rawdata
+mkdir $outdir/data
+mkdir $outdir/doc
+mkdir $outdir/pic
+mkdir $outdir/ucsc
+mkdir $outdir/logs
+mkdir $outdir/processed_gff
+mkdir $outdir/bowtie_results
+
+## Links to the annotation folder
+ln -s $curpath/../annotation $outdir/annotation
+
+## Links to the manuals folder
+ln -s $curpath/../manuals $outdir/manuals
+
+## Copy configuration file
+cp $curpath/../config-ncrna.txt $outdir/
+
+## Copy html file
+cp -r $curpath/../html $outdir/html
+
+## Copy pdf file
+cp -r $curpath/../pdf $outdir/pdf
+
+

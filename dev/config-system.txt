@@ -1,0 +1,33 @@
+#######################################################################
+## Installation Configuration
+#######################################################################
+INSTALL_WWW = 0
+#######################################################################
+## System settings
+#######################################################################
+## MANDATORY
+APPLI_DIR = /bioinfo/local/curie/ngs-data-analysis//ncPRO-seq.v1.6.1
+## OPTIONAL - WEB VERSION
+WWW_DIR = 
+CGI_DIR = 
+WWW_RES = 
+PBS_MODE = 0
+PBS_OPT = 
+PBS_PATH = 
+#######################################################################
+## Required Software - Specified the DIRECTORY name of the executables
+## If not specified, the program will try to locate the executable
+## using the 'which' command
+#######################################################################
+## MANDATORY
+R_PATH = /bioinfo/local/build/R/R/bin
+AWK_PATH = /usr/bin
+BOWTIE_PATH = /bioinfo/local/bowtie
+BOWTIE_INDEXES_PATH = /data/annotations/bowtie_indexes/
+BEDTOOLS_PATH = /bioinfo/local/BEDTools/bin
+SAMTOOLS_PATH = /usr/bin
+CONVERT_PATH = /usr/bin
+BAM_MAPCT_PATH = /bioinfo/users/jbrayet/bin
+PERL_PATH = /usr/bin
+PYTHON_PATH = /usr/bin
+MAIL_PATH = /usr/bin

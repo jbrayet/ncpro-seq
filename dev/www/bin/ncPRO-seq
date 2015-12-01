@@ -1,0 +1,89 @@
+#!/bin/bash
+
+VERSION="1.4.1b"
+NORMAL="\\033[0;39m" 
+RED="\\033[1;31m"
+BLUE="\033[1;34m"
+
+function usage {
+    echo -e "$RED""Usage : ./ncPRO-seq" v"$VERSION""$NORMAL"
+    echo -e "$RED""-c""$NORMAL"" <configuration file>"
+    echo -e "$RED""-s""$NORMAL"" <analysis step define as follow :"
+    echo -e "$BLUE""processRead :""$NORMAL"" calcualte read length distribution, median quality score for each postion, and group raw reads"
+    echo -e "$BLUE""processBam :""$NORMAL"" processed and group reads from bam files"
+    echo -e "$BLUE""mapGenome :""$NORMAL"" run Bowtie for genome mapping and processed bam files"
+    echo -e "$BLUE""mapGenomeStat :""$NORMAL"" compute number of mapped reads and unmapped reads in the genome" 
+    echo -e "$BLUE""mapAnnOverview :""$NORMAL"" compute overview of reads annotation" 
+    echo -e "$BLUE""overviewRmsk :""$NORMAL"" compute read coverage for each repeats family" 
+    echo -e "$BLUE""overviewRfam :""$NORMAL"" compute read coverage for each ncRNA family" 
+    echo -e "$BLUE""generateNcgff :""$NORMAL"" create gff file for special ncrna family" 
+    echo -e "$BLUE""ncrnaProcess :""$NORMAL"" ncrna family analyses, including read coverage, read length distribution, read coverage in subfamilies, and sequence logo" 
+    echo -e "$BLUE""genomeTracks :""$NORMAL"" genreate genome coverage ucsc track"
+    echo -e "$BLUE""ncrnaTracks :""$NORMAL"" genreate ucsc tracks for ncrna visualization"
+    echo -e "$BLUE""sigRegion :""$NORMAL"" detect significantly enriched regions" 
+    echo -e "$BLUE""html_builder :""$NORMAL"" build the html report file>"
+    echo -e "$RED""-h""$NORMAL"" <help>"
+    exit;
+}
+
+function version {
+    echo -e "ncPRO-seq version $VERSION"
+    exit;
+}
+
+if [ $# == 0 ]
+then
+    usage
+    exit
+fi
+
+make_options=""
+set -- $(getopt c:s:h:m:v "$@")
+while [ $# -gt 0 ]
+do
+    case "$1" in
+	(-c) nc_conf=$2; shift;;
+	(-s) make_options="$make_options $2"; echo $OPTARG; shift;;
+	(-m) umail=$2; shift;;
+	(-v) version;;
+	(-h) usage;;
+	(--) shift; break;;
+	(-*) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
+	(*)  break;;
+    esac
+    shift
+done
+
+
+## Set PATHS
+scripts_path=`dirname $0`
+install_path="$scripts_path/../"
+cur_path=$PWD
+
+#bowtie_index_path=`grep BOWTIE_INDEXES_PATH $install_path"config-system.txt" | cut -d= -f2 | sed -e 's/ //g'`
+#export  BOWTIE_INDEXES=$bowtie_index_path
+
+source $install_path/scripts/checkConfig.sh -c $install_path"config-system.txt" 2>&1
+
+make --file $install_path/Makefile CONFIG_FILE=$cur_path/$nc_conf CONFIG_SYS=$install_path"config-system.txt" $make_options 2>&1
+
+
+
+
+
+if [ $umail ]
+then
+    logfile=`grep LOGFILE $cur_path/$nc_conf | cut -d= -f2 | sed -e 's/ //g'`
+    mailx_path=`grep MAILX $install_path"config-system.txt" | awk -F"=" '{gsub(" $","",$0);print $2}'`
+    if [[ $mailx_path != "" ]]
+    then
+	mailcom=$mailx_path'/mailx'
+    else
+	mailcom='mailx'
+    fi
+    if [[ -e $cur_path/$logfile ]] 
+    then
+	cat $cur_path/$logfile | $mailcom -s 'ncPRO-seq analysis' $umail
+    fi
+fi
+

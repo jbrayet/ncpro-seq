@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>miRNA annotation</TITLE>
+<META NAME="description" CONTENT="miRNA annotation">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node45.html">
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html671"
+  HREF="node45.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html667"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html661"
+  HREF="node43.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html669"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html672"
+  HREF="node45.html">tRNA annotation</A>
+<B> Up:</B> <A NAME="tex2html668"
+  HREF="node41.html">Annotation files</A>
+<B> Previous:</B> <A NAME="tex2html662"
+  HREF="node43.html">RepeatMasker annotation</A>
+ &nbsp; <B>  <A NAME="tex2html670"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00073000000000000000"></A>
+<A NAME="subsection:mirna"></A>
+<BR>
+miRNA annotation
+</H2>
+The miRNA annotation files used in ncPRO-seq are created based on files from miRBase [<A
+ HREF="node51.html#Kozomara2011">8</A>]. The precursor miRNA gff file downloaded from miRBase can be used in ncPRO-seq after being transformed from gff2 to gff3 format. In miRBase, we cannot find genome coordinates of mature miRNAs. Therefore, we wrote a custom script to generate mature miRNA annotation file based on the mature miRNA sequences, precursor miRNA sequences and precursor miRNA annotation file. 
+<BR>
+<BR>
+Example of "attributes" column in precursor miRNA annotation file:
+<BR>
+<BR><code>ACC=MI0006363;ID=hsa-mir-1302-2</code>
+<BR>
+<BR>
+Example of "attributes" column in mature miRNA annotation file:
+<BR>
+<BR><code>Name=mmu-miR-206*;Precursor=mmu-mir-206;ID=mmu.miR.206star</code>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Nicolas Servant
+2012-05-31
+</ADDRESS>
+</BODY>
+</HTML>

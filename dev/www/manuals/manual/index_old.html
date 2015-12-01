@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ncPRO-seq
+Annotation and Profiling of ncRNAs from smallRNA-seq</TITLE>
+<META NAME="description" CONTENT="ncPRO-seq
+Annotation and Profiling of ncRNAs from smallRNA-seq">
+<META NAME="keywords" CONTENT="manual_v1.0">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_v1.0.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html16"
+  HREF="node1.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up_g.png"> 
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev_g.png"> 
+<A NAME="tex2html14"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html17"
+  HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A NAME="tex2html15"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<P>
+
+<DIV ALIGN="CENTER">
+<BR>
+
+<BR>
+</DIV>
+
+<P>
+<H1 ALIGN=CENTER>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR><SPAN  CLASS="textbf">ncPRO-seq</SPAN>
+<BR>
+Annotation and Profiling of ncRNAs from smallRNA-seq</H1>
+<P ALIGN=CENTER><STRONG>Chong-Jian Chen &amp; Nicolas Servant</STRONG>
+</P>
+<BR><P ALIGN=CENTER><B>Date:</B> Last updated : 3 February 2012</P>
+
+<HR>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html18"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html19"
+  HREF="node2.html">Overview</A>
+<UL>
+<LI><A NAME="tex2html20"
+  HREF="node3.html">Before starting</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html21"
+  HREF="node4.html">Requirements and Installation</A>
+<UL>
+<LI><A NAME="tex2html22"
+  HREF="node5.html">Hardware</A>
+<LI><A NAME="tex2html23"
+  HREF="node6.html">Operating system</A>
+<LI><A NAME="tex2html24"
+  HREF="node7.html">Required softwares</A>
+<LI><A NAME="tex2html25"
+  HREF="node8.html">Installation of ncPRO-seq</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html26"
+  HREF="node9.html">How to use it ?</A>
+<UL>
+<LI><A NAME="tex2html27"
+  HREF="node10.html">Configuration file</A>
+<LI><A NAME="tex2html28"
+  HREF="node11.html">Web interface version</A>
+<UL>
+<LI><A NAME="tex2html29"
+  HREF="node12.html">Input data files</A>
+<LI><A NAME="tex2html30"
+  HREF="node13.html">Alignment on a reference genome</A>
+<LI><A NAME="tex2html31"
+  HREF="node14.html">Annotation of non-coding RNAs</A>
+<LI><A NAME="tex2html32"
+  HREF="node15.html">Annotation of repetetive regions</A>
+<LI><A NAME="tex2html33"
+  HREF="node16.html">User Custom gff files</A>
+<LI><A NAME="tex2html34"
+  HREF="node17.html">Genome tracks visualisation</A>
+<LI><A NAME="tex2html35"
+  HREF="node18.html">Search enriched regions</A>
+<LI><A NAME="tex2html36"
+  HREF="node19.html">Run the analysis</A>
+</UL>
+<LI><A NAME="tex2html37"
+  HREF="node20.html">Command-line version</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html38"
+  HREF="node21.html">How to browse the results ?</A>
+<LI><A NAME="tex2html39"
+  HREF="node22.html">How does-it work ?</A>
+<UL>
+<LI><A NAME="tex2html40"
+  HREF="node23.html">Structure of the pipeline</A>
+<LI><A NAME="tex2html41"
+  HREF="node24.html">Input pre-processing</A>
+<UL>
+<LI><A NAME="tex2html42"
+  HREF="node25.html">Read pre-processing</A>
+<LI><A NAME="tex2html43"
+  HREF="node26.html">Alignment pre-processing</A>
+</UL>
+<LI><A NAME="tex2html44"
+  HREF="node27.html">Read mapping</A>
+<LI><A NAME="tex2html45"
+  HREF="node28.html">Read annotation</A>
+<LI><A NAME="tex2html46"
+  HREF="node29.html">Annotation analyses</A>
+<UL>
+<LI><A NAME="tex2html47"
+  HREF="node30.html">Reads with multiple mapping sites</A>
+<LI><A NAME="tex2html48"
+  HREF="node31.html">Extension parameters</A>
+<LI><A NAME="tex2html49"
+  HREF="node32.html">MiRNA read proportion</A>
+<LI><A NAME="tex2html50"
+  HREF="node33.html">Overview of repeat/Rfam</A>
+<LI><A NAME="tex2html51"
+  HREF="node34.html">Read profiling in each family</A>
+<LI><A NAME="tex2html52"
+  HREF="node35.html">Logo sequences</A>
+<LI><A NAME="tex2html53"
+  HREF="node36.html">Read coverage in each annotation item</A>
+<LI><A NAME="tex2html54"
+  HREF="node37.html">Track files</A>
+</UL>
+<LI><A NAME="tex2html55"
+  HREF="node38.html">Enrichment analysis</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html56"
+  HREF="node39.html">Annotation files</A>
+<UL>
+<LI><A NAME="tex2html57"
+  HREF="node40.html">Rfam annotation</A>
+<LI><A NAME="tex2html58"
+  HREF="node41.html">RepeatMasker annotation</A>
+<LI><A NAME="tex2html59"
+  HREF="node42.html">miRNA annotation</A>
+<LI><A NAME="tex2html60"
+  HREF="node43.html">tRNA annotation</A>
+<LI><A NAME="tex2html61"
+  HREF="node44.html">other annotations</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html62"
+  HREF="node45.html">Installation of additional softwares</A>
+<LI><A NAME="tex2html63"
+  HREF="node46.html">FAQ</A>
+<UL>
+<LI><A NAME="tex2html64"
+  HREF="node47.html">Enabling CGI using XAMPP</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html65"
+  HREF="node48.html">Bibliography</A>
+<LI><A NAME="tex2html66"
+  HREF="node49.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Nicolas Servant
+2012-02-03
+</ADDRESS>
+</BODY>
+</HTML>

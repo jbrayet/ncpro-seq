@@ -1,0 +1,7 @@
+##latex2html
+## options defined in latex2html-init file
+## icons in local icons/ folder
+## css style defined in manual.css
+
+## run the following command
+latex2html -init_file=latex2html-init manual.tex 

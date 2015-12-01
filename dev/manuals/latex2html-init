@@ -1,0 +1,7 @@
+$ICONSERVER='../icons/';
+##$ALTERNATIVE_ICONS='../icons/';
+
+$iconsizes{'up'} = 'WIDTH="20" HEIGHT="20"';
+$iconsizes{'next'} = 'WIDTH="20" HEIGHT="20"';
+$iconsizes{'previous'} = 'WIDTH="20" HEIGHT="20"';
+$iconsizes{'contents'} = 'WIDTH="40" HEIGHT="20"';

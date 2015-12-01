@@ -1,0 +1,170 @@
+## 13-10-11
+## C.Chen, N. Servant
+## Generate annotation files for ncRNAs annotation
+##
+
+##################################################
+### Prepare mature / precursor miRNA gff3 file ###
+### generate_miRNAGff/                         ###
+##################################################
+
+
+1. Download mature.fa, hairpin.fa and your orgnism precursor gff2 file (e.g. mmu.gff) from miRBase
+
+2. For example, we put mature.fa and hairpin.fas in the miRBase_v18/ folder, and use locateMatureMir.pl to generate mature miRNA gff3 file (mature_miRNA.gff)
+
+perl locateMatureMir.pl miRBase_v18/mature.fa miRBase_v18/hairpin.fa mmu.gff > mature_miRNA.gff
+
+3. Transform miRNA precursor gff2 file to gff3 file (precursor_miRNA.gff)
+
+awk 'BEGIN{OFS="\t";}{if(/#/){if($1~/version/){print "##gff-version","3"} else{print $0}} else {gsub("\"","",$9); gsub("\"","",$10); gsub(";","",$10); print "chr"$1,$2,$3,$4,$5,$6,$7,$8,$9$10}}' mmu.gff > precursor_miRNA.gff
+
+
+##################################################
+### Prepare repeats gff3 file                  ###
+### generate_rmskGff/                          ###
+##################################################
+
+-- For species in UCSC --
+
+1. Edit the getUCSCrmsk.bash file. Specify the genome name in UCSC to "ORGANISM"
+2. Execute the program
+./getUCSCrmsk.bash
+
+-- For species not in UCSC --
+1. Get the output file of RepeatMasker either from genome annotation website or by running RepeatMasker by yourself
+2. Execute the program 
+awk -f generateRMSKgff.awk RepeatMasker_output > organism.gff3
+
+##################################################
+### Prepare splice site gff3 file                  ###
+### generate_splicesiteGff/                          ###
+##################################################
+
+-- For species in UCSC, and want to use splice site from refgene --
+
+1. Edit the getUCSCsplicesite.bash file. Specify the genome name in UCSC to "ORGANISM"
+2. Execute the program
+./getUCSCsplicesite.bash
+
+##################################################
+### Prepare tRNA gff3 file                     ###
+### generate_tRNAGff/                          ###
+##################################################
+
+-- For species in UCSC --
+
+1. Edit the getUCSCtRNA.bash file. Specify the genome name in UCSC to "ORGANISM"
+2. Execute the program
+./getUCSCtRNA.bash
+
+
+##################################################
+### Prepare gene gff3 file                     ###
+### generate_geneGff/                          ###
+##################################################
+
+-- For species in UCSC, and want to use refgene as gene annotation--
+
+1. Edit the getUCSCrefgene.bash file. Specify the genome name in UCSC to "ORGANISM"
+2. Execute the program
+./getUCSCrefgene.bash
+
+
+##################################################
+### Prepare RFam gff3 file                     ###
+### generate_rfamGff/                          ###
+##################################################
+
+-- For species that don't have the problem of genome assembly version conflict --
+
+Take human genome as an example
+
+1. Downoad rfam v10.1 annotation files
+ftp://ftp.sanger.ac.uk/pub/databases/Rfam/10.1/genome.gff3.tar.gz
+ftp://ftp.sanger.ac.uk/pub/databases/Rfam/10.1/database_files/genome_entry.txt.gz
+
+2. First, you need find the seqId for human chromosomes 
+Then based on seqId, you can find annotation files for hg19
+
+gunzip genome.gff3.tar.gz
+tar xvf genome.gff3.tar
+gunzip genome_entry.txt.gz
+echo "##gff-version 3" > rfam.gff
+echo "##description Mus musculus RFAM database v11" >> rfam.gff
+echo "##genome-build mm10" >> rfam.gff
+
+for i in `grep "musculus chromosome" genome_entry.txt | grep -v virus | grep -v bacteria | awk -F"\t" '{ split($4,a,","); c=split(a[1],b," "); chrm=b[c]; gsub("[()chr]","",chrm); if(chrm!=""){print $2"|chr"chrm}}'`
+do
+id=`echo $i | cut -d '|' -f 1`
+chr=`echo $i | cut -d '|' -f 2`
+echo $id
+echo $chr
+echo "grep -v "^#" genome_gff/$id.gff3 | sed -e 's/^$id/$chr/g' >> tmp" | sh
+done
+sortBed -i tmp >> rfam.gff
+rm tmp
+
+-- For genomes in which you want to have Rfam gff3 file in new genome version--
+
+-if you have the chain file needed by liftOver software to convert annotations between different genome assemblies, you can use liftOver to get new rfam gff file.
+-if you don't have chain file, you can follow the following steps to get new rfam gff file. Take Arabidopsis genome as an example
+
+##!!!You need have bowtie (<2), Bioperl 1.5.2/1.6 and INFERNAL 1.0 installed in you computer to do the following steps!!!
+
+1. Download the following three files from Rfam v10.1 database
+ftp://ftp.sanger.ac.uk/pub/databases/Rfam/10.1/Rfam.cm.gz
+ftp://ftp.sanger.ac.uk/pub/databases/Rfam/10.1/genome.gff3.tar.gz
+ftp://ftp.sanger.ac.uk/pub/databases/Rfam/10.1/database_files/genome_entry.txt.gz
+
+2. Extract rfam files
+gunzip Rfam.cm.gz
+tar -zxvf genome.gff3.tar.gz
+gunzip genome_entry.txt.gz
+
+3. run generateNewRfamGff.pl to get the accession ID of the genome sequence used in Rfam v10.1
+./generateNewRfamGff.pl -f genome_entry.txt -k "Arabidopsis thaliana"
+from the output, we get the ID information:
+AE005173.1
+AJ270058.1
+BA000014.8
+BA000015.5
+AJ270060.1
+AE005172.1
+
+4. Search thest ID in NCBI nucleotide database and download these corresponding fasta sequences, and combine them into a single fas files (rfam.genome.fas) to get the genome sequence file used in Rfam10.1
+>use following links to downoad fasta files
+http://www.ncbi.nlm.nih.gov/nuccore/AE005173.1
+http://www.ncbi.nlm.nih.gov/nuccore/AJ270058.1
+http://www.ncbi.nlm.nih.gov/nuccore/BA000014.8
+http://www.ncbi.nlm.nih.gov/nuccore/BA000015.5
+http://www.ncbi.nlm.nih.gov/nuccore/AJ270060.1
+http://www.ncbi.nlm.nih.gov/nuccore/AE005172.1
+>combine all downloaded fasta files
+cat *.fasta > rfam.genome.fas
+
+5. Download the TAIR9.0 genome sequence, and combine them into a single fas files to get the genome sequence file (TAIR9.genome.fas) you want to have the Rfam annotation
+>use following links to downoad fas files
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chr1.fas
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chr2.fas
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chr3.fas
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chr4.fas
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chr5.fas
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chrC.fas
+ftp://ftp.arabidopsis.org/home/tair/Sequences/whole_chromosomes/OLD/TAIR9_chromosome_file/TAIR9_chrM.fas
+>combine all downloaded fas files
+cat TAIR9_*.fas > TAIR9.genome.fas
+
+6. use generateNewRfamGff.pl again to get the Rfam annotation gff3 file of TAIR9.0 genome. Note that modified rfam_scan.pl which originally download from Rfam is called by generateNewRfamGff.pl to do cmsearch step.
+./generateNewRfamGff.pl -f genome_entry.txt -k "Arabidopsis thaliana" -d genome_gff/ -g rfam.genome.fas -G TAIR9.genome.fas -o rfam.gff
+
+
+##################################################
+### sort gff3 file                     ###
+##################################################
+
+make sure that all gff3 file are sorted by chrom/start.
+
+sortGFF.bash
+
+

@@ -1,0 +1,51 @@
+\BOOKMARK [1][-]{section.1}{Overview}{}
+\BOOKMARK [2][-]{subsection.1.1}{Before starting}{section.1}
+\BOOKMARK [2][-]{subsection.1.2}{About us}{section.1}
+\BOOKMARK [1][-]{section.2}{Requirements and Installation}{}
+\BOOKMARK [2][-]{subsection.2.1}{Hardware}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Operating system}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{Required softwares}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Installation of ncPRO-seq}{section.2}
+\BOOKMARK [1][-]{section.3}{How to use it ?}{}
+\BOOKMARK [2][-]{subsection.3.1}{Configuration file}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Web interface version}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Input data files}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Alignment on a reference genome}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Annotation Overview}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Profiling of non-coding RNAs}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Profiling of repetetive regions}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.6}{User Custom gff files}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.7}{Genome tracks visualisation}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.8}{Search enriched regions}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.9}{Run the analysis}{subsection.3.2}
+\BOOKMARK [2][-]{subsection.3.3}{Command-line version}{section.3}
+\BOOKMARK [1][-]{section.4}{How to browse the results ?}{}
+\BOOKMARK [1][-]{section.5}{How does-it work ?}{}
+\BOOKMARK [2][-]{subsection.5.1}{Structure of the pipeline}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{Input pre-processing}{section.5}
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Read pre-processing}{subsection.5.2}
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Alignment pre-processing}{subsection.5.2}
+\BOOKMARK [2][-]{subsection.5.3}{Reads mapping}{section.5}
+\BOOKMARK [2][-]{subsection.5.4}{Reads annotation}{section.5}
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Reads with multiple mapping sites}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Extension parameters}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.3}{miRNAs read proportion}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.4}{Reads annotation overview}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.5}{Overview of repeat/Rfam}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.6}{Read profiling in each family}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.7}{Logo sequences}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.8}{Read coverage in each annotation item}{subsection.5.4}
+\BOOKMARK [3][-]{subsubsection.5.4.9}{Track files}{subsection.5.4}
+\BOOKMARK [2][-]{subsection.5.5}{Enrichment analysis}{section.5}
+\BOOKMARK [1][-]{section.6}{Annotation files}{}
+\BOOKMARK [2][-]{subsection.6.1}{Rfam annotation}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{RepeatMasker annotation}{section.6}
+\BOOKMARK [2][-]{subsection.6.3}{miRNA annotation}{section.6}
+\BOOKMARK [2][-]{subsection.6.4}{tRNA annotation}{section.6}
+\BOOKMARK [2][-]{subsection.6.5}{Other annotations}{section.6}
+\BOOKMARK [1][-]{section.7}{Installation of additional softwares}{}
+\BOOKMARK [1][-]{section.8}{FAQ}{}
+\BOOKMARK [2][-]{subsection.8.1}{Enabling CGI using XAMPP}{section.8}
+\BOOKMARK [2][-]{subsection.8.2}{Working with a new genome}{section.8}
+\BOOKMARK [2][-]{subsection.8.3}{other FAQs}{section.8}
+\BOOKMARK [1][-]{subsection.8.3}{Bibliography}{}

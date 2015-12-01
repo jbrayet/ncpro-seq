@@ -1,0 +1,116 @@
+\begin{thebibliography}{10}
+
+\bibitem{Simon2010}
+Simon Anders and Wolfgang Huber.
+\newblock {D}ifferential expression analysis for sequence count data.
+\newblock {\em Genome Biology}, 11:R106, 2010.
+
+\bibitem{Auguie2012}
+Baptiste Auguie.
+\newblock {\em gridExtra: functions in Grid graphics}, 2012.
+\newblock R package version 0.9.1.
+
+\bibitem{OliverseqLogo}
+Oliver Bembom.
+\newblock {\em seq{L}ogo: {S}equence logos for {DNA} sequence alignments}.
+\newblock R package version 1.18.0.
+
+\bibitem{Brodersen2006}
+P.~Brodersen and O.~Voinnet.
+\newblock {{T}he diversity of {R}{N}{A} silencing pathways in plants}.
+\newblock {\em Trends Genet.}, 22:268--280, May 2006.
+
+\bibitem{Dreszer2012}
+T.~R. Dreszer, D.~Karolchik, A.~S. Zweig, A.~S. Hinrichs, B.~J. Raney, R.~M.
+  Kuhn, L.~R. Meyer, M.~Wong, C.~A. Sloan, K.~R. Rosenbloom, G.~Roe, B.~Rhead,
+  A.~Pohl, V.~S. Malladi, C.~H. Li, K.~Learned, V.~Kirkup, F.~Hsu, R.~A. Harte,
+  L.~Guruvadoo, M.~Goldman, B.~M. Giardine, P.~A. Fujita, M.~Diekhans, M.~S.
+  Cline, H.~Clawson, G.~P. Barber, D.~Haussler, and W.~James~Kent.
+\newblock {{T}he {U}{C}{S}{C} {G}enome {B}rowser database: extensions and
+  updates 2011}.
+\newblock {\em Nucleic Acids Res.}, 40:D918--923, Jan 2012.
+
+\bibitem{Gardner2011}
+P.~P. Gardner, J.~Daub, J.~Tate, B.~L. Moore, I.~H. Osuch, S.~Griffiths-Jones,
+  R.~D. Finn, E.~P. Nawrocki, D.~L. Kolbe, S.~R. Eddy, and A.~Bateman.
+\newblock {{R}fam: {W}ikipedia, clans and the "decimal" release}.
+\newblock {\em Nucleic Acids Res.}, 39:D141--145, Jan 2011.
+
+\bibitem{Robert2004}
+Robert~C Gentleman, Vincent~J. Carey, Douglas~M. Bates, and {others}.
+\newblock {B}ioconductor: {O}pen software development for computational biology
+  and bioinformatics.
+\newblock {\em Genome Biology}, 5:R80, 2004.
+
+\bibitem{Ghildiyal2009}
+M.~Ghildiyal and P.~D. Zamore.
+\newblock {{S}mall silencing {R}{N}{A}s: an expanding universe}.
+\newblock {\em Nat. Rev. Genet.}, 10:94--108, Feb 2009.
+
+\bibitem{Kozomara2011}
+A.~Kozomara and S.~Griffiths-Jones.
+\newblock {mi{R}{B}ase: integrating micro{R}{N}{A} annotation and
+  deep-sequencing data}.
+\newblock {\em Nucleic Acids Res.}, 39:D152--157, Jan 2011.
+
+\bibitem{Langmead2009}
+B.~Langmead, C.~Trapnell, M.~Pop, and S.~L. Salzberg.
+\newblock {{U}ltrafast and memory-efficient alignment of short {D}{N}{A}
+  sequences to the human genome}.
+\newblock {\em Genome Biol.}, 10:R25, 2009.
+
+\bibitem{Li2009}
+H.~Li, B.~Handsaker, A.~Wysoker, T.~Fennell, J.~Ruan, N.~Homer, G.~Marth,
+  G.~Abecasis, and R.~Durbin.
+\newblock {{T}he {S}equence {A}lignment/{M}ap format and {S}{A}{M}tools}.
+\newblock {\em Bioinformatics}, 25:2078--2079, Aug 2009.
+
+\bibitem{Erich2011}
+Erich Neuwirth.
+\newblock {\em RColorBrewer: ColorBrewer palettes}, 2011.
+\newblock R package version 1.0-5.
+
+\bibitem{Quinlan2010}
+A.~R. Quinlan and I.~M. Hall.
+\newblock {{B}{E}{D}{T}ools: a flexible suite of utilities for comparing
+  genomic features}.
+\newblock {\em Bioinformatics}, 26:841--842, Mar 2010.
+
+\bibitem{Rcitation}
+{R Development Core Team}.
+\newblock {\em {R}: {A} {L}anguage and {E}nvironment for {S}tatistical
+  {C}omputing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2011.
+\newblock {ISBN} 3-900051-07-0.
+
+\bibitem{Smit2008}
+AFA. Smit and R.~Hubley.
+\newblock {{R}epeat{M}odeler {O}pen-1.0.}
+\newblock {\em http://www.repeatmasker.org}, 2008-2010.
+
+\bibitem{Taft2010}
+R.~J. Taft, C.~Simons, S.~Nahkuri, H.~Oey, D.~J. Korbie, T.~R. Mercer,
+  J.~Holst, W.~Ritchie, J.~J. Wong, J.~E. Rasko, D.~S. Rokhsar, B.~M. Degnan,
+  and J.~S. Mattick.
+\newblock {{N}uclear-localized tiny {R}{N}{A}s are associated with
+  transcription initiation and splice sites in metazoans}.
+\newblock {\em Nat. Struct. Mol. Biol.}, 17:1030--1034, Aug 2010.
+
+\bibitem{Joern2010}
+Joern Toedling, Constance Ciaudo, Olivier Voinnet, Edith Heard, and Emmanuel
+  Barillot.
+\newblock girafe - an {R/Bioconductor} package for functional exploration of
+  aligned next-generation sequencing reads.
+\newblock {\em Bioinformatics}, 26:2902--2903, 2010.
+
+\bibitem{Wickham2007}
+Hadley Wickham.
+\newblock Reshaping data with the {reshape} package.
+\newblock {\em Journal of Statistical Software}, 21(12):1--20, 2007.
+
+\bibitem{Wickham2009}
+Hadley Wickham.
+\newblock {\em ggplot2: elegant graphics for data analysis}.
+\newblock Springer New York, 2009.
+
+\end{thebibliography}

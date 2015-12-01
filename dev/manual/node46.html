@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Other annotations</TITLE>
+<META NAME="description" CONTENT="Other annotations">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node45.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node47.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html695"
+  HREF="node47.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html691"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html687"
+  HREF="node45.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html693"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html696"
+  HREF="node47.html">Installation of additional softwares</A>
+<B> Up:</B> <A NAME="tex2html692"
+  HREF="node41.html">Annotation files</A>
+<B> Previous:</B> <A NAME="tex2html688"
+  HREF="node45.html">tRNA annotation</A>
+ &nbsp; <B>  <A NAME="tex2html694"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00075000000000000000">
+Other annotations</A>
+</H2>
+
+<P>
+While "nc" in the name implies a focus on noncoding RNAs, ncPRO-seq is far more and can be used to analyse any annotation files in gff3 format like splice site and promoter region of protein coding gene. Note that these annotation files should contain one of the following three features in "attributes" column to indicate the names of items: Name, Alias or ID. 
+<BR>
+<BR>
+It has already been reported that small RNAs are enriched at 3' ends of internal exons (spliRNAs) and at transcription initiation sites (tiRNAs) [#!Taft2010!#]. To show how the "other annotations" option works, we create gff3 annotation files of both splice donor site and acceptor site for genomes that has refgene annotation in UCSC [#!Dreszer2012!#]. Basically, to generate donor site annotation, we locate the 3' end of all exons except the last one in genes, and extend 100bp upstream and downstream, thereby obtain regions of size 201bp with 3' end of exon at position 101. For acceptor site, 5' end of exons excluding the first exon in genes are chosen to extend +- 100bp. 
+<BR>
+<BR>
+Example of "attributes" column in splice acceptor annotation file:
+<BR>
+<BR><code>GeneName=NM_001083312;Exon_idx=2;Type=acceptor;Extend_base=100;</code>
+<BR>
+<BR>
+Example of "attributes" column in splice donor annotation file:
+<BR>
+<BR><code>GeneName=NM_001083312;Exon_idx=1;Type=donor;Extend_base=100;</code>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html695"
+  HREF="node47.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html691"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html687"
+  HREF="node45.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html693"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html696"
+  HREF="node47.html">Installation of additional softwares</A>
+<B> Up:</B> <A NAME="tex2html692"
+  HREF="node41.html">Annotation files</A>
+<B> Previous:</B> <A NAME="tex2html688"
+  HREF="node45.html">tRNA annotation</A>
+ &nbsp; <B>  <A NAME="tex2html694"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

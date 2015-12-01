@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Rfam annotation</TITLE>
+<META NAME="description" CONTENT="Rfam annotation">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node43.html">
+<LINK REL="previous" HREF="node41.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node43.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html649"
+  HREF="node43.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html645"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html639"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html647"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html650"
+  HREF="node43.html">RepeatMasker annotation</A>
+<B> Up:</B> <A NAME="tex2html646"
+  HREF="node41.html">Annotation files</A>
+<B> Previous:</B> <A NAME="tex2html640"
+  HREF="node41.html">Annotation files</A>
+ &nbsp; <B>  <A NAME="tex2html648"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00071000000000000000"></A>
+<A NAME="subsection:rfam"></A>
+<BR>
+Rfam annotation
+</H2>
+Rfam annotation file can be directly downloaded from ftp://ftp.sanger.ac.uk/pub/databases/Rfam Rfam database [#!Gardner2011!#]. Since the reference genomes of some species might changes in different version of Rfam database, make sure that you are using the right Rfam annotation file for your genome assembly. For example, the latest Rfam annotation file for NCBI37/mm9 mouse genome is in version 9.0, but not version 10 where you can find the annotation file for GRCh37/hg19 human genome. If there is a conflict between the genome assembly used by Rfam and the one you are analyzing, we offer a simple and quick way to solve it by generating new Rfam annotation file for your genome assembly. Basically, we extract Rfam sequences based on the genome annotation in Rfam, then blast them to the new genome, finally use rfam_scan.pl from Rfam database and custom script to create new Rfam annotation file from blast results. And another way to avoid the conflict is: if you have the chain file specifying differences between two different genome assemblies, you can use liftOver from UCSC genome website to get new rfam gff file. 
+<BR>
+<BR>
+In Rfam annotation file, the value in "Alias" tag in the "attributes" column indicates the ncRNA family information. Example of "attributes" column:
+<BR>
+<BR><code>ID=RF00026.1;Name=RF00026;Alias=U6;Note=AC157543.8/131368-131259</code>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html649"
+  HREF="node43.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html645"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html639"
+  HREF="node41.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html647"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html650"
+  HREF="node43.html">RepeatMasker annotation</A>
+<B> Up:</B> <A NAME="tex2html646"
+  HREF="node41.html">Annotation files</A>
+<B> Previous:</B> <A NAME="tex2html640"
+  HREF="node41.html">Annotation files</A>
+ &nbsp; <B>  <A NAME="tex2html648"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

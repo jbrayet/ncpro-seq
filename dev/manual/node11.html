@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Configuration file</TITLE>
+<META NAME="description" CONTENT="Configuration file">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html246"
+  HREF="node12.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html242"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html236"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html244"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html247"
+  HREF="node12.html">Web interface version</A>
+<B> Up:</B> <A NAME="tex2html243"
+  HREF="node10.html">How to use it</A>
+<B> Previous:</B> <A NAME="tex2html237"
+  HREF="node10.html">How to use it</A>
+ &nbsp; <B>  <A NAME="tex2html245"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00041000000000000000">
+Configuration file</A>
+</H2>
+ncPRO-seq is a flexible pipeline which allows users to specify different options at each analysis stage, from raw reads processing to ways to generate results. In the web interface version, all options can be easily chosen through the web (see <A HREF="node12.html#subsection:webinterface">3.2</A>). In command line version (see <A HREF="node22.html#subsection:commandline">3.3</A>), users can manually edit the <code>config-ncrna.txt</code> file to define options according to the descriptions of options below (Table&nbsp;<A HREF="node22.html#tab:configureoptions">3</A>) and also inside the file. In the <code>config-ncrna.txt</code> file, you may find more options than that in the web page, especially for the Bowtie mapping step, but we do not suggest you to make any changes in these extra options unless you are an expert.
+<BR>
+<BR>
+<P>
+<A NAME="subsection:configure"></A>
+<P>
+<DIV ALIGN="CENTER">
+1whitegray!20
+<A NAME="271"></A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 2:</STRONG>
+Options from the configuration file</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>gray 
+<SPAN  CLASS="textbf">Options</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">LOGFILE</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>File that lists actions that have occurred during the analysis</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">N_CPU</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Number of CPU used by Bowtie to do mapping</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">FASTQ_FORMAT</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>The quality score format of the fastq reads. Three formats are supported: <SPAN  CLASS="textbf">phred33</SPAN> (Sanger, Solexa version 1.8 or later), <SPAN  CLASS="textbf">solexa</SPAN> (Solexa prior to version 1.3), <SPAN  CLASS="textbf">solexa1.3</SPAN> (Solexa version 1.3 to 1.7)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">BOWTIE_GENOME_REFERENCE</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Basename of the Bowtie index genome reference file (base space). See the http://bowtie-bio.sourceforge.net/manual.shtml Bowtie manual for additional informations</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">BOWTIE_GENOME_REFERENCE_CS</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Basename of the Bowtie index genome reference file (color space). See the http://bowtie-bio.sourceforge.net/manual.shtml Bowtie manual for additional informations</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">BOWTIE_GENOME_OPTIONS_FQ</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Options for Bowtie to map base space reads in fastq format (Solexa)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">BOWTIE_GENOME_OPTIONS_FA</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Options for Bowtie to map base space reads in fasta format (454)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">BOWTIE_GENOME_OPTIONS_CS</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Options for Bowtie to map color space reads (SOLiD)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">GROUP_READ</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Group reads based on their sequence for raw reads before mapping or read alignments in bam file depending on the input format. <SPAN  CLASS="textbf">1</SPAN>: Yes; <SPAN  CLASS="textbf">0</SPAN>: No; <SPAN  CLASS="textbf">2</SPAN>: for the online version where the input files have already been grouped using our provided scripts</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">ORGANISM</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Name of the reference organism. Must be the same as the organism available in the annotation folder (i.e. mm9, hg19, ...)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">MATURE_MIRNA</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Annotation against miRNAs from miRBase. Both miRNA with and without an extended item are acceptable (see <A HREF="node32.html#subsubsection:extension">5.4.2</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">PRECURSOR_MIRNA</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Annotation against pre-miRNAs from miRBase. Both miRNA with and without an extended item are acceptable (see <A HREF="node32.html#subsubsection:extension">5.4.2</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">NCRNA_RFAM</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>List of the RFAM ncRNA(s) to focus on (comma separator) - no extension parameter</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">NCRNA_RFAM_EX</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>List of the RFAM ncRNA(s) to focus on (comma separator) - extension parameter (see <A HREF="node32.html#subsubsection:extension">5.4.2</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">NCRNA_RMSK</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>List of the repetitive elements to focus on (comma separator) - no extension parameter</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">NCRNA_RMSK_EX</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>List of the repetitive elements to focus on (comma separator) -  extension parameter (see <A HREF="node32.html#subsubsection:extension">5.4.2</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">TRNA_UCSC</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Mapping against tRNA sequences. Both tRNA with and without an extended item are acceptable (see <A HREF="node32.html#subsubsection:extension">5.4.2</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">OTHER_NCRNA_GFF</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>List of custom gff files to intersect with the mapped reads</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">LOGO_DIRECTION</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Align the sequence on the 5' or 3' end <SPAN  CLASS="textbf">[5/3]</SPAN></TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">IC_SCALE</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Use the information content scale for Logo outputs. <SPAN  CLASS="textbf">1</SPAN>: Yes; <SPAN  CLASS="textbf">0</SPAN>: No</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">GENOME_TRACK_OPTIONS</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Options to select reads mapped in the genome to generate track file. Four options should be provided to filter reads, and separated by comma. <SPAN  CLASS="textbf">min_len=N</SPAN> : the minimum length (N) of read; <SPAN  CLASS="textbf">max_len=N</SPAN>: the maximum length (N) of read; <SPAN  CLASS="textbf">min_copy=N</SPAN> : the minimum number (N) of matches in the genome; <SPAN  CLASS="textbf">max_copy=N</SPAN>: the maximum number (N) of matches in the genome. To have more than one type of track, different sets of options should be separated by pipe (<SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \vert$"></SPAN>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">SIG_READ_OPTIONS</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Options to select mapped reads for enrichment analysis (see <A HREF="node40.html#subsection:enrichmentanalysis">5.5</A>). Please refer to the format of <SPAN  CLASS="textbf">GENOME_TRACK_OPTIONS</SPAN></TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">SIG_WIN_SIZE</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>The window size used to scan the genome (e.g. 10000) (see <A HREF="node40.html#subsection:enrichmentanalysis">5.5</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">SIG_STEP_SIZE</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>The step size (e.g. 50000) (see <A HREF="node40.html#subsection:enrichmentanalysis">5.5</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">EXCLUDE_ANN_GFF</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>List of annotation files (gff3). Only reads which are not mapped in these annotated regions are kept for enrichment analysis (see <A HREF="node40.html#subsection:enrichmentanalysis">5.5</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">FIT_MODEL</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>The model used to fit window-based read distribution. Three models can be chosen: <SPAN  CLASS="textbf">NB.ML</SPAN>, <SPAN  CLASS="textbf">NB.012</SPAN>, and <SPAN  CLASS="textbf">Poisson</SPAN> (see <A HREF="node40.html#subsection:enrichmentanalysis">5.5</A>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN  CLASS="textbf">PVAL_CUTOFF</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>The cut-off used to get regions significantly enriched with reads</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><A NAME="tab:configureoptions"></A></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html246"
+  HREF="node12.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html242"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html236"
+  HREF="node10.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html244"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html247"
+  HREF="node12.html">Web interface version</A>
+<B> Up:</B> <A NAME="tex2html243"
+  HREF="node10.html">How to use it</A>
+<B> Previous:</B> <A NAME="tex2html237"
+  HREF="node10.html">How to use it</A>
+ &nbsp; <B>  <A NAME="tex2html245"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

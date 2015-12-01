@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Alignment on a reference genome</TITLE>
+<META NAME="description" CONTENT="Alignment on a reference genome">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node12.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html291"
+  HREF="node15.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html287"
+  HREF="node12.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html281"
+  HREF="node13.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html289"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html292"
+  HREF="node15.html">Annotation Overview</A>
+<B> Up:</B> <A NAME="tex2html288"
+  HREF="node12.html">Web interface version</A>
+<B> Previous:</B> <A NAME="tex2html282"
+  HREF="node13.html">Input data files</A>
+ &nbsp; <B>  <A NAME="tex2html290"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00042200000000000000">
+Alignment on a reference genome</A>
+</H3>
+The Figure&nbsp;<A HREF="#fig:web2">2</A> presents the different parameters to set for the short reads mapping using the Bowtie alignment tool.
+<BR>
+First, the user has to select if the reads has to be grouped before mapping (see section&nbsp;<A HREF="node27.html#subsubsection:readpreprocess">5.2.1</A>). We highly recommended to use this option, as it reduces a lot the size of the input reads (and output files), and have only very few impact (if any) on the results. All the reads corresponding to the same sequence are merged, and the related quality values are averaged.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:web2"></A><A NAME="750"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+ncPRO-seq web interface: set alignment parameters</CAPTION>
+<TR><TD><IMG
+  WIDTH="1519" HEIGHT="660" ALIGN="BOTTOM" BORDER="0"
+ SRC="./web_2.png"
+ ALT="Image web_2"></TD></TR>
+</TABLE>
+</DIV>
+The following Bowtie options can then be available. For details explanation, please see the http://bowtie-bio.sourceforge.net/manual.shtml Bowtie manual page.
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">Bowtie pre-built index.</SPAN> The name of the index file to be searched in the Bowtie index folder (as specified in the system configuration file during installation). 
+</LI>
+<LI><SPAN  CLASS="textbf">Mapping options.</SPAN> Using the interface, all input file are aligned with the options '-a -best -strata -y' to always select the best hits. Then, the number of mismatches (up to 3), the maximum number of reportable alignments or the fastq format have to be choose according to the input data type, and the goal of the analysis. 
+</LI>
+<LI><SPAN  CLASS="textbf">Bowtie multithreading option.</SPAN> Number of CPUs used by Bowtie to perform the alignment.
+</LI>
+</UL>
+Finally, the user can also ask for a quality mapping report. In this case, the following outputs are generated :
+
+<UL>
+<LI>Reads length distribution.
+</LI>
+<LI>Sequence length distribution (only the distinct reads are used).
+</LI>
+<LI>Number of reads aligned on the genome reference.
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html291"
+  HREF="node15.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html287"
+  HREF="node12.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html281"
+  HREF="node13.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html289"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html292"
+  HREF="node15.html">Annotation Overview</A>
+<B> Up:</B> <A NAME="tex2html288"
+  HREF="node12.html">Web interface version</A>
+<B> Previous:</B> <A NAME="tex2html282"
+  HREF="node13.html">Input data files</A>
+ &nbsp; <B>  <A NAME="tex2html290"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

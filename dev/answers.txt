@@ -1,0 +1,14 @@
+/usr/bin
+y
+y
+/usr/curie_ngs/bowtie_indexes/
+y
+y
+y
+n
+y
+/usr/curie_ngs
+y
+/var/www/
+/usr/lib/cgi-bin/
+/var/www/ncproseq_v1.6.3/results

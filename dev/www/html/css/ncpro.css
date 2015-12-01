@@ -1,0 +1,358 @@
+html, body{
+	background: #000;
+}
+
+body{
+	font-family:  Verdana,Arial,sans-serif;
+	font-size: 11px;
+	text-align: justify;
+}
+
+#container{
+	width: 80%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #585858;//#FFFFFF;
+	-moz-border-radius:5px; -webkit-border-radius:5px;  
+}
+
+#top{
+    border : 1px solid #000;
+    border-bottom-width: 1px;
+    -moz-border-radius:5px; -webkit-border-radius:5px;  
+}
+
+#header{
+    border: 0;
+    width: 100%;
+    background-color: #585858;
+}
+
+#title{
+    vertical-align:top;
+    color:  #6e6e6e;
+    //background: url("../images/ncrna_design_2.jpg");
+    font-size: 22px;
+}
+#title b{
+    color: #ededed;
+}
+
+#tabs{
+	padding: 10px;
+	//line-height: 1.4em;
+	color: #000;
+	background-color: #FFFFFF;
+	overflow-y: auto;
+	overflow-x: hidden;
+	border: 2px solid #000;
+	border-bottom: none;
+	border-top: none;
+}
+
+#org{
+    font-weight: bold;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-active {
+    cursor: text;
+    font-weight: bold;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    position: relative;
+}
+
+#tabs .content{
+    padding: 10px 10px 10px 10px;
+    margin : 0px 3px 0px 3px;
+    border: 2px solid #948b89;
+    height: 100%;
+     -moz-border-radius:5px; -webkit-border-radius:5px;  
+}
+
+.imgbrowse{
+    vertical-align: middle;
+}
+
+.gallery{
+    overflow: hidden;
+}
+
+.gallery table{
+    padding : 1px 1px 30px 1px;
+}
+
+.gallery table a {
+    color: #6168cc;
+    text-decoration: none;
+    font-size: 11px;
+}
+.gallery table a:hover {
+    color: #b6bafb;
+}
+
+.gallery .galtitle{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.gallery .galtitle:first-letter{
+    text-transform: uppercase;
+}
+
+
+.gallery .galtitle b{
+    font-size: 15px;
+}
+
+ul.param li, ul.log li{
+	list-style: none;	
+	margin-bottom: 4px;
+}
+
+ul.param li{
+	margin-left: -10px;
+}
+
+ul.log li{
+	margin-left: 60px;
+}
+
+ul.param li:before, ul.log li:before{
+	content: "\27B2\0020";
+}
+
+ul.param li span{
+	color: #948b89;
+	margin-left: 5px;
+}
+
+.divprof{
+    clear: both;
+    text-align: left;
+    padding: 1px 0px 1px 5px;
+    background-color: #6e6e6e;//#b6bafb;//#6168cc;
+    color: #ededed;//black;
+    font-weight: bold;
+    font-size: 13px;
+     -moz-border-radius:5px; -webkit-border-radius:5px;  
+}
+
+
+p.intro{
+    clear: both;
+    color:  #6168cc;
+    padding: 10px 5px 10px 5px; 
+    background:#b6bafb;
+    font-size: 12px;
+    //width: 300px;
+     -moz-border-radius:5px; -webkit-border-radius:5px;  
+
+}
+
+p.intro b{
+    display: block;
+    padding: 1px 0px 1px 8px;
+    color: #ededed;
+    background-color:#6e6e6e;
+    //font-size: 11px;
+}
+
+
+#tracks a {
+    color: #6168cc;
+    text-decoration: none;
+}
+
+#tracks a:hover {color:  #b6bafb;}
+
+.tdisplay{
+    width:100%;
+    cellpadding:0;
+    cellspacing:0;
+    border:0;
+}
+
+#tableError{
+    color:red;
+    font-weight:bold;
+}
+
+#bottom{	
+    height: 25px;
+    font-size: 10px;
+    padding-top: 5px;
+    text-align: center;	
+    color: #000;
+    background-color: #fff;
+    border: 0
+	//border: 2px solid #000;
+	//border-top-width: 1px;
+    clear: both;
+
+}
+
+
+
+.param li{
+    font-weight:bold;
+}
+
+.sampleprof{
+    background-color:#F2F2F2;
+    border: solid 1px #6168cc;
+    margin : 10px 0px 10px 0px;
+     -moz-border-radius:5px; -webkit-border-radius:5px;  
+}
+
+#logs{
+    color: #606060;
+    font-size: 11px;
+}
+
+
+#tracks a {color: #6168cc;}
+#tracks a:hover {color:  #b6bafb;}
+
+#tdisplay{
+ //   width:80%;
+    cellpadding:0;
+    cellspacing:0;
+    border:0;
+}
+/*
+.dataTables_info { padding-top: 0; }
+.dataTables_paginate { padding-top: 0; }
+.css_right { float: right; }
+*/
+/**********************************/
+/*Interface*/
+
+
+.msg_content{
+    background:#E7E8FD;
+    border: 1px solid #6168cc;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:10px;
+    margin-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+    //background: #f8e8d7;
+    //color: #ff8500;
+    //padding: 20px;
+    //border: 1px solid #ffad53;
+    //border-top: none;
+    -moz-border-radius-bottomright: 5px;
+    -khtml-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -khtml-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+.msg_header{
+    background: url("../images/ncPRO_logo.png");
+    background-repeat:no-repeat;
+    background-position:left top;
+    background-color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4em;
+    color: black;
+}
+
+.msg_header a{
+    text-decoration: none;
+    color: #6168cc;
+}
+
+.msg_container{
+	padding: 20px;
+}
+
+
+#container .msg_content h1{
+	font-size: 16px;
+	font-weight: normal;
+	color: #0060bf;
+}
+
+#container .msg_content h1:before{
+	content: "\274F\0020";
+}
+
+
+#container .msg_content ul.log{
+//	font-size: .9em;
+	color: #0060bf;
+}
+
+#container .msg_content ul.log li span.localtime{
+	margin-left: 5px;
+}
+
+#container .msg_content ul.log li span.message{
+	margin-left: 30px;
+//	font-family: "Courier";
+	color: #000;
+	font-weight: bold;
+}
+
+#container .msg_content img, #main .msg_header img{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#container .msg_content a img{
+	border: none;
+}
+
+#config {
+    position:relative;
+}
+
+#wrapper {
+    background:silver;
+    position:absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    opacity: 0.5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter:alpha(opacity=80);
+}
+
+#alertError {
+    background:#F6CECE;
+    //border: 1px solid #F5A9A9;
+    //position:absolute;
+    opacity: 0.8;
+    color :red;
+    font-weight:bold;
+}
+
+.selfoc{
+    font-weight:bold;
+}
+
+.confdiv{
+    display:none;
+    //opacity: 0.5;
+    background:#E7E8FD;
+    border: 1px solid #6168cc;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:50px;
+    margin-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+     -moz-border-radius:5px; -webkit-border-radius:5px;  
+}
+   

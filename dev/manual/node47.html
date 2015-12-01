@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Installation of additional softwares</TITLE>
+<META NAME="description" CONTENT="Installation of additional softwares">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node48.html">
+<LINK REL="previous" HREF="node41.html">
+<LINK REL="up" HREF="manual.html">
+<LINK REL="next" HREF="node48.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html707"
+  HREF="node48.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html703"
+  HREF="manual.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html697"
+  HREF="node46.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html705"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html708"
+  HREF="node48.html">FAQ</A>
+<B> Up:</B> <A NAME="tex2html704"
+  HREF="manual.html">ncPRO-seq Annotation and profiling</A>
+<B> Previous:</B> <A NAME="tex2html698"
+  HREF="node46.html">Other annotations</A>
+ &nbsp; <B>  <A NAME="tex2html706"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00080000000000000000"></A>
+<A NAME="subsection:additional"></A>
+<BR>
+Installation of additional softwares
+</H1>
+
+<P>
+We give some simple outlines to install additional  softwares required by ncPRO-seq, for more information, please refer to the main site of each software:
+
+<P>
+
+<UL>
+<LI>The http://bowtie-bio.sourceforge.net/manual.shtml Bowtie Aligner (<SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ &lt;$"></SPAN>v2.0) [#!Langmead2009!#].
+
+<P>
+
+<UL>
+<LI>The latest Bowtie program can be found http://sourceforge.net/projects/bowtie-bio/files/bowtie/0.12.7 here. Users can choose the pre-compiled version for your operating system, or build your own Bowtie from the source (bowtie-*-src.zip). Users need to unzip the downloaded file. If starting with the source, users should use <code>make</code> command at the shell prompt to compile the program. In both ways, users should either add the directory where Bowtie binaries are located to your <code>PATH</code> variable, or copy/move Bowtie binaries to a directory (e.g. /usr/local/bin) in your <code>PATH</code> variable.
+<BR>
+<BR>
+The indexes of the chosen genome reference need to be prepared beforehand and set in the environment variable <code>BOWTIE_INDEXES</code>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The http://www.r-project.org/ R (<SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ &gt;$"></SPAN>v2.12.0) [#!Rcitation!#] and http://www.bioconductor.org/ BioConductor [#!Robert2004!#] softwares.
+
+<P>
+
+<UL>
+<LI>There are several ways to install R program detailed in http://cran.r-project.org/doc/manuals/R-admin.html# R-project site. For Mac OS X, the easiest way is to download the latest installer package (R-*.pkg) for Mac OS X, which can be installed by double clicking.  For Linux, we just show how to build R from the source.  Users can choose a http://cran.r-project.org/mirrors.html site mirror close to you to download the latest R source code (R-*.tar.gz) for all platforms. You need to unpack the file and go to the unpacked directory at the shell prompt, use
+<PRE>
+&gt; ./configure
+&gt; make
+&gt; su
+&gt; make install
+</PRE>
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>To install Bioconductor, make sure that your computer is connecting to internet and use the following commands in an R command window (type <code>R</code> in your shell prompt, and press enter<!-- MATH
+ $\hookleftarrow$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ \hookleftarrow $"></SPAN>):
+<PRE>
+&gt; source("http://bioconductor.org/biocLite.R")
+&gt; biocLite()
+</PRE>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The R packages:  http://www.bioconductor.org/packages/2.2/bioc/html/seqLogo.html seqLogo [#!OliverseqLogo!#], http://www.bioconductor.org/packages/2.6/bioc/html/girafe.html girafe [#!Joern2010!#] and  http://cran.r-project.org/web/packages/RColorBrewer/index.html RColorBrewer [#!Erich2011!#].
+
+<P>
+
+<UL>
+<LI>To install the seqLogo and girafe package in R, use the following commands in an R command window:
+<PRE>
+&gt; source("http://bioconductor.org/biocLite.R")
+&gt; biocLite("girafe")
+&gt; biocLite("seqLogo")
+</PRE> 
+</LI>
+<LI>To install the RColorBrewer package in R, use the following command in an R command window:
+<PRE>
+&gt; install.packages("RColorBrewer")
+</PRE>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The http://code.google.com/p/bedtools/BEDTools suite (<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ &gt;=$"></SPAN>v2.15.0) [#!Quinlan2010!#] and the 
+http://xfer.curie.fr/get/nil/2Rpz9IfJKcZ/BEDTools_MapCount_ColorTag.tar.gz bamMapCount program.
+
+<P>
+
+<UL>
+<LI>The latest BEDTools can be downloaded http://code.google.com/p/bedtools/downloads/list here (BEDTools.*.tar.gz). Use the following commands to compile BEDTools, and copy/move all binaries in bin subdirectory to a directory (e.g. /usr/local/bin) in your <code>PATH</code> variable
+<PRE>
+&gt; tar -zxvf BEDTools.&lt;version&gt;.tar.gz 
+&gt; cd BEDTools&lt;version&gt;
+&gt; make clean
+&gt; make all
+&gt; su
+&gt; cp bin/* /usr/local/bin
+</PRE>
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>The bamMapCount program is friendly shared by Assaf Gordon, which can be found http://xfer.curie.fr/get/2Rpz9IfJKcZ/BEDTools_MapCount_ColorTag.tar.gz here (BEDTools_MapCount_ColorTag.tar.gz). He integrated his programs to BEDTools. Users can unpack the whole package and compile it, then just copy/move the bamMapCount program in bin subdirectory to a directory (e.g. /usr/local/bin) in your <code>PATH</code> variable if you have already installed BEDTools.
+<PRE>
+&gt; tar -zxvf BEDTools_MapCount_ColorTag.tar.gz
+&gt; cd BEDTools_MapCount_ColorTag
+&gt; make all
+&gt; su
+&gt; cp bin/bamMapCount /usr/local/bin
+</PRE>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The http://samtools.sourceforge.net/ SAMTools suite [#!Li2009!#].
+
+<P>
+
+<UL>
+<LI>Users can download the latest version of SAMtools http://sourceforge.net/projects/samtools/files/latest/download?source=files here (samtools-*.tar.bz2). Make sure that you have http://www.zlib.net zlib library (<SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ &gt;$"></SPAN>v1.2.3) installed in your system before compiling SAMtools. Then use the following commands to compile the SAMtools packages, and copy/move 'samtools', `bcftools/bcftools' and other executables/scripts in `misc' to a directory (e.g. /usr/local/bin) in your <code>PATH</code> variable: 
+<PRE>
+&gt; tar -xvjpf samtools-&lt;version&gt;.tar.bz2
+&gt; cd samtools-&lt;version&gt;
+&gt; make
+&gt; su
+&gt; cp samtools /usr/local/bin
+&gt; cp bcftools/bcftools /usr/local/bin
+</PRE>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The http://www.imagemagick.org/script/index.php Convert/ImageMagick utilies.
+
+<P>
+
+<UL>
+<LI>The Convert/ImageMagick normally comes with most of modern linux/UNIX systems, but if you also want to install another version, there are a few easy steps to do which are detailed http://www.imagemagick.org/script/install-source.php#unix here. For Mac OS X, users can use http://www.macports.org/ MacPorts command as shown below to build ImageMagick in your system.
+<PRE>
+&gt; su
+&gt; port install ImageMagick
+</PRE>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>A local server with php.
+
+<P>
+
+<UL>
+<LI>For macOS users, most of the time, Apache is already installed but not activated. The different steps to enabled Apache and php are described http://www.procata.com/blog/archives/2007/10/28/working-with-php-5-in-mac-os-x-105 here. For other linux/UNIX users, if the webserver is not installed, http://www.apachefriends.org/en/xampp.html XAMPP might be a good choice.
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html707"
+  HREF="node48.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="../icons//next.png"></A> 
+<A NAME="tex2html703"
+  HREF="manual.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="../icons//up.png"></A> 
+<A NAME="tex2html697"
+  HREF="node46.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="../icons//prev.png"></A> 
+<A NAME="tex2html705"
+  HREF="node1.html">
+<IMG WIDTH="40" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="../icons//contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html708"
+  HREF="node48.html">FAQ</A>
+<B> Up:</B> <A NAME="tex2html704"
+  HREF="manual.html">ncPRO-seq Annotation and profiling</A>
+<B> Previous:</B> <A NAME="tex2html698"
+  HREF="node46.html">Other annotations</A>
+ &nbsp; <B>  <A NAME="tex2html706"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jocelyn Brayet
+2015-02-12
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,196 @@
+% This file was created with JabRef 2.6.
+% Encoding: UTF-8
+
+@ARTICLE{Simon2010,
+  author = {Simon Anders and Wolfgang Huber},
+  title = {{D}ifferential expression analysis for sequence count data},
+  journal = {Genome Biology},
+  year = {2010},
+  volume = {11},
+  pages = {R106},
+  doi = {10.1186/gb-2010-11-10-r106},
+  url = {http://genomebiology.com/2010/11/10/R106/}
+}
+
+@MANUAL{OliverseqLogo,
+  title = {seq{L}ogo: {S}equence logos for {DNA} sequence alignments},
+  author = {Oliver Bembom},
+  note = {R package version 1.18.0}
+}
+
+@ARTICLE{Brodersen2006,
+  author = {Brodersen, P. and Voinnet, O. },
+  title = {{{T}he diversity of {R}{N}{A} silencing pathways in plants}},
+  journal = {Trends Genet.},
+  year = {2006},
+  volume = {22},
+  pages = {268--280},
+  month = {May}
+}
+
+@ARTICLE{Dreszer2012,
+  author = {Dreszer, T. R. and Karolchik, D. and Zweig, A. S. and Hinrichs, A.
+	S. and Raney, B. J. and Kuhn, R. M. and Meyer, L. R. and Wong, M.
+	and Sloan, C. A. and Rosenbloom, K. R. and Roe, G. and Rhead, B.
+	and Pohl, A. and Malladi, V. S. and Li, C. H. and Learned, K. and
+	Kirkup, V. and Hsu, F. and Harte, R. A. and Guruvadoo, L. and Goldman,
+	M. and Giardine, B. M. and Fujita, P. A. and Diekhans, M. and Cline,
+	M. S. and Clawson, H. and Barber, G. P. and Haussler, D. and James
+	Kent, W. },
+  title = {{{T}he {U}{C}{S}{C} {G}enome {B}rowser database: extensions and updates
+	2011}},
+  journal = {Nucleic Acids Res.},
+  year = {2012},
+  volume = {40},
+  pages = {D918--923},
+  month = {Jan}
+}
+
+@ARTICLE{Gardner2011,
+  author = {Gardner, P. P. and Daub, J. and Tate, J. and Moore, B. L. and Osuch,
+	I. H. and Griffiths-Jones, S. and Finn, R. D. and Nawrocki, E. P.
+	and Kolbe, D. L. and Eddy, S. R. and Bateman, A. },
+  title = {{{R}fam: {W}ikipedia, clans and the "decimal" release}},
+  journal = {Nucleic Acids Res.},
+  year = {2011},
+  volume = {39},
+  pages = {D141--145},
+  month = {Jan}
+}
+
+@ARTICLE{Robert2004,
+  author = {Robert C Gentleman and Vincent J. Carey and Douglas M. Bates and
+	{others}},
+  title = {{B}ioconductor: {O}pen software development for computational biology
+	and bioinformatics},
+  journal = {Genome Biology},
+  year = {2004},
+  volume = {5},
+  pages = {R80},
+  url = {http://genomebiology.com/2004/5/10/R80}
+}
+
+@ARTICLE{Ghildiyal2009,
+  author = {Ghildiyal, M. and Zamore, P. D. },
+  title = {{{S}mall silencing {R}{N}{A}s: an expanding universe}},
+  journal = {Nat. Rev. Genet.},
+  year = {2009},
+  volume = {10},
+  pages = {94--108},
+  month = {Feb}
+}
+
+@ARTICLE{Kozomara2011,
+  author = {Kozomara, A. and Griffiths-Jones, S. },
+  title = {{mi{R}{B}ase: integrating micro{R}{N}{A} annotation and deep-sequencing
+	data}},
+  journal = {Nucleic Acids Res.},
+  year = {2011},
+  volume = {39},
+  pages = {D152--157},
+  month = {Jan}
+}
+
+@ARTICLE{Langmead2009,
+  author = {Langmead, B. and Trapnell, C. and Pop, M. and Salzberg, S. L. },
+  title = {{{U}ltrafast and memory-efficient alignment of short {D}{N}{A} sequences
+	to the human genome}},
+  journal = {Genome Biol.},
+  year = {2009},
+  volume = {10},
+  pages = {R25}
+}
+
+@ARTICLE{Li2009,
+  author = {Li, H. and Handsaker, B. and Wysoker, A. and Fennell, T. and Ruan,
+	J. and Homer, N. and Marth, G. and Abecasis, G. and Durbin, R. },
+  title = {{{T}he {S}equence {A}lignment/{M}ap format and {S}{A}{M}tools}},
+  journal = {Bioinformatics},
+  year = {2009},
+  volume = {25},
+  pages = {2078--2079},
+  month = {Aug}
+}
+
+@MANUAL{Erich2011,
+  title = {RColorBrewer: ColorBrewer palettes},
+  author = {Erich Neuwirth},
+  year = {2011},
+  note = {R package version 1.0-5},
+  url = {http://CRAN.R-project.org/package=RColorBrewer}
+}
+
+@ARTICLE{Quinlan2010,
+  author = {Quinlan, A. R. and Hall, I. M. },
+  title = {{{B}{E}{D}{T}ools: a flexible suite of utilities for comparing genomic
+	features}},
+  journal = {Bioinformatics},
+  year = {2010},
+  volume = {26},
+  pages = {841--842},
+  month = {Mar}
+}
+
+@MANUAL{Rcitation,
+  title = {{R}: {A} {L}anguage and {E}nvironment for {S}tatistical {C}omputing},
+  author = {{R Development Core Team}},
+  organization = {R Foundation for Statistical Computing},
+  address = {Vienna, Austria},
+  year = {2011},
+  note = {{ISBN} 3-900051-07-0},
+  url = {http://www.R-project.org/}
+}
+
+@ARTICLE{Smit2008,
+  author = {Smit, AFA. and Hubley, R. },
+  title = {{{R}epeat{M}odeler {O}pen-1.0.}},
+  journal = {http://www.repeatmasker.org},
+  year = {2008-2010}
+}
+
+@ARTICLE{Taft2010,
+  author = {Taft, R. J. and Simons, C. and Nahkuri, S. and Oey, H. and Korbie,
+	D. J. and Mercer, T. R. and Holst, J. and Ritchie, W. and Wong, J.
+	J. and Rasko, J. E. and Rokhsar, D. S. and Degnan, B. M. and Mattick,
+	J. S. },
+  title = {{{N}uclear-localized tiny {R}{N}{A}s are associated with transcription
+	initiation and splice sites in metazoans}},
+  journal = {Nat. Struct. Mol. Biol.},
+  year = {2010},
+  volume = {17},
+  pages = {1030--1034},
+  month = {Aug}
+}
+
+@ARTICLE{Joern2010,
+  author = {Joern Toedling and Constance Ciaudo and Olivier Voinnet and Edith
+	Heard and Emmanuel Barillot},
+  title = {girafe - an {R/Bioconductor} package for functional exploration of
+	aligned next-generation sequencing reads},
+  journal = {Bioinformatics},
+  year = {2010},
+  volume = {26},
+  pages = {2902-2903},
+  doi = {10.1093/bioinformatics/btq531}
+}
+
+@BOOK{Wickham2009,
+  title = {ggplot2: elegant graphics for data analysis},
+  publisher = {Springer New York},
+  year = {2009},
+  author = {Hadley Wickham},
+  isbn = {978-0-387-98140-6},
+  url = {http://had.co.nz/ggplot2/book}
+}
+
+@ARTICLE{Wickham2007,
+  author = {Hadley Wickham},
+  title = {Reshaping Data with the {reshape} Package},
+  journal = {Journal of Statistical Software},
+  year = {2007},
+  volume = {21},
+  pages = {1--20},
+  number = {12},
+  url = {http://www.jstatsoft.org/v21/i12/}
+}
+

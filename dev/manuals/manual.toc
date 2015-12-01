@@ -1,0 +1,52 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Overview}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Before starting}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}About us}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Requirements and Installation}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Hardware}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Operating system}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Required softwares}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Installation of ncPRO-seq{}}{6}{subsection.2.4}
+\contentsline {section}{\numberline {3}How to use it ?}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Configuration file}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Web interface version}{10}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Input data files}{11}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Alignment on a reference genome}{12}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Annotation Overview}{13}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Profiling of non-coding RNAs}{13}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Profiling of repetetive regions}{14}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}User Custom gff files}{14}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Genome tracks visualisation}{14}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Search enriched regions}{15}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}Run the analysis}{15}{subsubsection.3.2.9}
+\contentsline {subsection}{\numberline {3.3}Command-line version}{16}{subsection.3.3}
+\contentsline {section}{\numberline {4}How to browse the results ?}{17}{section.4}
+\contentsline {section}{\numberline {5}How does-it work ?}{20}{section.5}
+\contentsline {subsection}{\numberline {5.1}Structure of the pipeline}{20}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Input pre-processing}{20}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Read pre-processing}{21}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Alignment pre-processing}{21}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Reads mapping}{21}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Reads annotation}{22}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Reads with multiple mapping sites}{22}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Extension parameters}{22}{subsubsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.3}miRNAs read proportion}{23}{subsubsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.4}Reads annotation overview}{23}{subsubsection.5.4.4}
+\contentsline {subsubsection}{\numberline {5.4.5}Overview of repeat/Rfam}{23}{subsubsection.5.4.5}
+\contentsline {subsubsection}{\numberline {5.4.6}Read profiling in each family}{24}{subsubsection.5.4.6}
+\contentsline {subsubsection}{\numberline {5.4.7}Logo sequences}{24}{subsubsection.5.4.7}
+\contentsline {subsubsection}{\numberline {5.4.8}Read coverage in each annotation item}{25}{subsubsection.5.4.8}
+\contentsline {subsubsection}{\numberline {5.4.9}Track files}{25}{subsubsection.5.4.9}
+\contentsline {subsection}{\numberline {5.5}Enrichment analysis}{25}{subsection.5.5}
+\contentsline {section}{\numberline {6}Annotation files}{26}{section.6}
+\contentsline {subsection}{\numberline {6.1}Rfam annotation}{27}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}RepeatMasker annotation}{27}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}miRNA annotation}{27}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}tRNA annotation}{28}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Other annotations}{28}{subsection.6.5}
+\contentsline {section}{\numberline {7}Installation of additional softwares}{28}{section.7}
+\contentsline {section}{\numberline {8}FAQ}{31}{section.8}
+\contentsline {subsection}{\numberline {8.1}Enabling CGI using XAMPP}{31}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Working with a new genome}{32}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}other FAQs}{32}{subsection.8.3}
+\contentsline {section}{Bibliography}{32}{subsection.8.3}
