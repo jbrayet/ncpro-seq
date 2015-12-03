@@ -23,6 +23,7 @@ MAINTAINER Jocelyn Brayet <jocelyn.brayet@curie.fr>
 
 RUN apt-get update && apt-get install -y \
     wget \
+    curl \
     gfortran \
     zlib1g-dev \
     libncurses-dev \
@@ -50,7 +51,7 @@ RUN make
 
 RUN ln -s /usr/bin/R-3.1.0/bin/R /usr/bin/R
 
-RUN wget http://sourceforge.net/projects/ncproseq/files/docker/ncPRO-seq.v1.6.3_Docker.tar.gz -P /usr/bin
+RUN wget https://github.com/jbrayet/ncpro-seq/raw/master/docker/ncPRO-seq.v1.6.3_Docker.tar.gz -P /usr/bin
 RUN tar -zxvf /usr/bin/ncPRO-seq.v1.6.3_Docker.tar.gz -C /usr/bin/
 RUN rm -rf /usr/bin/ncPRO-seq.v1.6.3_Docker.tar.gz
 
@@ -75,9 +76,9 @@ RUN cd /usr/bin/Imaging-1.1.7; python setup.py install --user
 RUN sed -i 's/MAIL_PATH = /MAIL_PATH = \/usr\/bin/g' /usr/curie_ngs/ncproseq_v1.6.3/config-system.txt
 
 # Expose port 80 (webserver), 21 (FTP server), 8800 (Proxy)
-EXPOSE :80
-EXPOSE :21
-EXPOSE :8800
+# EXPOSE :80
+# EXPOSE :21
+# EXPOSE :8800
 
 ENTRYPOINT ["python","/usr/bin/ncPRO-seq.v1.6.3_Docker/ncPRO-seq.py"]
 
