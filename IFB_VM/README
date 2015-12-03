@@ -1,0 +1,47 @@
+###################################################################################
+#		      ncPRO-seq Docker installation in IFB VM			  #
+###################################################################################
+
+### Run ncPRO-seq ###
+
+Just write : 
+    ncproseq
+
+### Folders ###
+
+- data : your datas for the analysis (fasq format)
+- annotation : ncPRO-seq annoation (if you haven't annotation, ncPRO-seq downloads
+               annotation to you
+- bowtie_indexes : indexes to run Bowtie
+- results : results of your analysis
+
+### Download results ###
+
+Use scp, example :
+    scp -r -P 22 root@192.54.201.176:~/results ~/Desktop/ncPRO-results/
+
+with root@192.54.201.176 : your Virtual Machine
+
+### Persistent disk ###
+
+If you used a persistent disk in your IFB VM, you can create symbolic links to keep
+your datas. First, remove ncPRO-seq folder :
+
+    rm -rf data
+    rm -rf annotation
+    rm -rf bowtie_indexes
+    rm -rf results
+
+And create symbolic links with your folders in persistent disk :
+
+    ln -s /root/mydisk/your/data/folder data
+    ln -s /root/mydisk/your/annotation/folder annotation
+    ln -s /root/mydisk/your/Bowtie/indexes/folder bowtie_indexes
+    ln -s /root/mydisk/your/results/folder results
+
+###################################################################################
+Copyleft ↄ⃝ 2012 Institut Curie
+Author(s): Jocelyn Brayet, Laurene Syx, Chongjian Chen, Nicolas Servant(Institut Curie) 2012 - 2015
+Contact: bioinfo.ncproseq@curie.fr
+This software is distributed without any guarantee under the terms of the GNU General
+Public License, either Version 2, June 1991 or Version 3, June 2007.
