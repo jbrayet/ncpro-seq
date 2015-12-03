@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 mkdir -p ~/bowtie_indexes
 mkdir -p ~/annotations
