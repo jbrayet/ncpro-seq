@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.6.1"
+VERSION="1.6.4"
 NORMAL="\\033[0;39m" 
 RED="\\033[1;31m"
 BLUE="\033[1;34m"

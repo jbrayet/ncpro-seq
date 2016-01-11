@@ -18,7 +18,7 @@ NORMAL="\\033[0;39m"
 RED="\\033[0;31m"
 BLUE="\\033[0;34m"
 
-NCPRO=ncproseq_v1.6.3
+NCPRO=ncproseq_v1.6.4
 
 die() {
     echo -e "$RED""Exit - ""$*""$NORMAL" 1>&2
@@ -231,8 +231,7 @@ if [ XX${ans} = XXy ]; then
     unzip bowtie-1.1.2-src.zip
     cd bowtie-1.1.2
     make
-    cp -rf /usr/bin/ncPRO-seq.v1.6.3_Docker/tmp_ncPRO/bowtie-1.1.2 /usr/bin/
-    export PATH=$PREFIX_BIN/bowtie-1.1.2:$PATH
+    cp bowtie bowtie-build bowtie-inspect $PREFIX_BIN
     cd ..
     wasInstalled=0;
 fi
@@ -390,8 +389,8 @@ if [ XX${ans} = XXy ]; then
     $get ImageMagick.tar.gz http://www.imagemagick.org/download/ImageMagick.tar.gz
     tar -zxvf ImageMagick.tar.gz
     cd ImageMagick*
-    ./configure --prefix=$PREFIX_BIN/convert  CPPFLAGS=-I$PREFIX_BIN/convert/include
-    #./configure --prefix=$PREFIX_BIN/convert  CPPFLAGS=-I$PREFIX_BIN/convert/include LDFLAGS="-L${PREFIX_BIN}/convert/lib -R${PREFIX_BIN}/convert/lib"
+    #./configure --prefix=$PREFIX_BIN/convert  CPPFLAGS=-I$PREFIX_BIN/convert/include
+    ./configure --prefix=$PREFIX_BIN/convert  CPPFLAGS=-I$PREFIX_BIN/convert/include LDFLAGS="-L${PREFIX_BIN}/convert/lib -R${PREFIX_BIN}/convert/lib"
     make
     make install
     cd ..

@@ -106,7 +106,7 @@ for sample in tabName :
 		writeLeftString(c,ysize,text,"Times-Roman",18)
 
 
-writeCenterString(c,220,"Version : 1.6.3","Times-Roman",18)
+writeCenterString(c,220,"Version : 1.6.4","Times-Roman",18)
 writeCenterString(c,200,"Organism : "+dargs["organism"],"Times-Roman",18)
 
 fileAnnot = open(dargs["annotationDirection"]+"/"+dargs["organism"]+"/annotation.version","r")
