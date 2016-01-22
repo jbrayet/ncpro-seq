@@ -28,8 +28,8 @@ PROJECT_NAME = test_Curie
 ## Three types of fastq format are supported:phred33, solexa, solexa1.3
 #######################################################################
 
-FASTQ_FORMAT = solexa
-BOWTIE_GENOME_REFERENCE = mm10
+FASTQ_FORMAT = solexa1.3
+BOWTIE_GENOME_REFERENCE = hg19
 BOWTIE_GENOME_REFERENCE_CS = 
 BOWTIE_GENOME_OPTIONS_CS = -C -v 2 -a -m 20 --best --strata -f -y --col-keepends
 BOWTIE_GENOME_OPTIONS_FQ = -e 50 -a -m 20 --best --strata --nomaqround -y
@@ -55,11 +55,8 @@ FILTER_ZERO_COUNTS = 0
 #######################################################################
 ## Annotation files
 #######################################################################
-# /bioinfo/users/jbrayet/project_dev/ncPRO-seq/test/annotation/hg19/pirna_pirbase.gff
-# /bioinfo/users/jbrayet/project_dev/ncPRO-seq/test/annotation/hg19/pirna_pirnabank.gff
-# /bioinfo/users/jbrayet/project_dev/ncPRO-seq/test/annotation/hg19/cluster_pirna_pirbase.gff
-ORGANISM = mm10
-ANNO_CATALOG = annotation/mm10/precursor_miRNA.gff annotation/mm10/rfam.gff annotation/mm10/rmsk.gff annotation/mm10/coding_gene.gff
+ORGANISM = hg19
+ANNO_CATALOG = annotation/hg19/precursor_miRNA.gff annotation/hg19/pirna_pirbase.gff annotation/hg19/rfam.gff annotation/hg19/rmsk.gff annotation/hg19/coding_gene.gff
 
 #######################################################################
 ## ncRNA from Rfam

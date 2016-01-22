@@ -6,7 +6,7 @@ INSTALL_WWW = 0
 ## System settings
 #######################################################################
 ## MANDATORY
-APPLI_DIR = /bioinfo/local/curie/ngs-data-analysis//ncPRO-seq.v1.6.1
+APPLI_DIR = /bioinfo/local/curie/ngs-data-analysis/ncproseq_v1.6.5
 ## OPTIONAL - WEB VERSION
 WWW_DIR = 
 CGI_DIR = 
@@ -27,7 +27,7 @@ BOWTIE_INDEXES_PATH = /data/annotations/bowtie_indexes/
 BEDTOOLS_PATH = /bioinfo/local/BEDTools/bin
 SAMTOOLS_PATH = /usr/bin
 CONVERT_PATH = /usr/bin
-BAM_MAPCT_PATH = /bioinfo/users/jbrayet/bin
+BAM_MAPCT_PATH = /bioinfo/local/build/BEDTools/
 PERL_PATH = /usr/bin
 PYTHON_PATH = /usr/bin
 MAIL_PATH = /usr/bin

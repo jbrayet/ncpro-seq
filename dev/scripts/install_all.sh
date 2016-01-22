@@ -18,7 +18,7 @@ NORMAL="\\033[0;39m"
 RED="\\033[0;31m"
 BLUE="\\033[0;34m"
 
-NCPRO=ncproseq_v1.6.4
+NCPRO=ncproseq_v1.6.5
 
 die() {
     echo -e "$RED""Exit - ""$*""$NORMAL" 1>&2

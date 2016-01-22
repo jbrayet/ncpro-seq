@@ -31,10 +31,10 @@ print(allMap)
 print(length(allMap[1,]))
 
 for(i in 1:length(allMap[1,])){
-	allMap[4,i] <- allMap[4,i]-sum(allAnn[,i])
+	allMap["mapped",i] <- allMap["mapped",i]-sum(allAnn[,i])
 }
 
-allAnn <- rbind(allAnn,allMap[4,])
+allAnn <- rbind(allAnn,allMap["mapped",])
 
 print(allAnn)
 
