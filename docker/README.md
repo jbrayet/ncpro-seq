@@ -38,7 +38,7 @@ After the successful installation, you must create ncpro image :
 
 ```
 cd /var/lib/docker
-wget Dockerfile http://sourceforge.net/projects/ncproseq/files/docker/Dockerfile
+wget https://github.com/jbrayet/ncpro-seq/raw/master/docker/Dockerfile
 docker build -t ncproseq:1.6.5 -f Dockerfile .
 ```
 
