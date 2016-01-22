@@ -36,21 +36,27 @@ At first you need to install docker. Please follow the very good instructions fr
 
 After the successful installation, you must create ncpro image :
 
+```
 cd /var/lib/docker
 wget Dockerfile http://sourceforge.net/projects/ncproseq/files/docker/Dockerfile
-docker build -t ncpro:1.0 - < Dockerfile
+docker build -t ncproseq:1.6.5 -f Dockerfile .
+```
 
 Create local folder
 
+```
 mkdir bowtie_indexes
 mkdir annotations
 mkdir data
 mkdir results
+```
 
 Add your data in data folder and your Bowtie indexes in bowtie_indexes folder.
 
 Run ncPro-seq image : 
 
-docker run -i -t -v /your/local/path/bowtie_indexes/:/usr/curie_ngs/bowtie_indexes/ -v /your/local/path/annotations/:/usr/curie_ngs/annotation/ -v /your/local/path/data/:/usr/curie_ngs/rawdata/ -v /your/local/path/results/:/usr/curie_ngs/results_host/ ncpro:1.0
+```
+docker run -i -t -v /your/local/path/bowtie_indexes/:/usr/curie_ngs/bowtie_indexes/ -v /your/local/path/annotations/:/usr/curie_ngs/annotation/ -v /your/local/path/data/:/usr/curie_ngs/rawdata/ -v /your/local/path/results/:/usr/curie_ngs/results_host/ ncpro:1.6.5
+```
 
 Your results are in /your/local/path/results folder. 
