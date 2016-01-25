@@ -231,7 +231,7 @@ if [ XX${ans} = XXy ]; then
     unzip bowtie-1.1.2-src.zip
     cd bowtie-1.1.2
     make
-    cp bowtie bowtie-build bowtie-inspect $PREFIX_BIN
+    cp bowtie* $PREFIX_BIN
     cd ..
     wasInstalled=0;
 fi
