@@ -30,7 +30,7 @@
 \usepackage[absolute]{textpos} 
 
 % Title Page
-\title{\vspace{7cm}\textbf{ncPRO-seq}\\\normalsize  Annotation and profiling of ncRNAs in sRNA-seq data\\\vspace{1cm}\large{\bf{User Guide}}\\\vspace{1cm} \normalsize ncPRO-seq version 1.6.1}
+\title{\vspace{7cm}\textbf{ncPRO-seq}\\\normalsize  Annotation and profiling of ncRNAs in sRNA-seq data\\\vspace{1cm}\large{\bf{User Guide}}\\\vspace{1cm} \normalsize ncPRO-seq version 1.6.5}
 \date{\normalsize Last updated : \today}
 \author{Chong-Jian Chen \& Nicolas Servant}
 \def \ncpip{ncPRO-seq}
@@ -600,7 +600,7 @@ Example of "attributes" column in splice donor annotation file:\\\\
 \section{Installation of additional softwares}
 \label{subsection:additional}
 
-We give some simple outlines to install additional  softwares required by \ncpip{}, for more information, please refer to the main site of each software:
+We give some simple outlines to install additional softwares required by \ncpip{}, for more information, please refer to the main site of each software:
 
 \begin{itemize}
  \item The \href{http://bowtie-bio.sourceforge.net/manual.shtml}{ Bowtie Aligner} ($<$v2.0) \cite{Langmead2009}.
@@ -726,6 +726,25 @@ OR
 \end{itemize}
 
 \end{itemize}
+
+\section{ncPRO-seq on Galaxy}
+\label{subsection:additional}
+
+You can install ncPRO-seq on your Galaxi instance. 
+
+\subsection{ncPRO-seq dependencie and Galaxy settings}
+
+To install ncPRO-seq on your Galaxy instance, you must install Docker tool. It's the only dependencie !
+
+ \item The \href{https://www.docker.com}{ Docker} program:
+ 
+\begin{itemize}
+ \item For Linux users : \href{https://docs.docker.com/linux/step_one}{install Docker for Linux}
+ \item For MacOS users : \href{https://docs.docker.com/mac/step_one}{install Docker for MacOS}
+ \item For Windows users : \href{https://docs.docker.com/windows/step_one}{install Docker for Windows}
+\end{itemize}
+
+ \item Galaxy settings to use Docker images:
 
 \section{FAQ}
 \subsection{Enabling CGI using XAMPP}
