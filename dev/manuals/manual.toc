@@ -6,15 +6,15 @@
 \contentsline {subsection}{\numberline {2.1}Hardware}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Operating system}{5}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Required softwares}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Installation of ncPRO-seq{}}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Installation of ncPRO-seq 1.6.5{}}{6}{subsection.2.4}
 \contentsline {section}{\numberline {3}How to use it ?}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}Configuration file}{8}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Web interface version}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Web interface version}{11}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Input data files}{11}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Alignment on a reference genome}{12}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Annotation Overview}{13}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.2}Alignment on a reference genome}{11}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Annotation Overview}{12}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Profiling of non-coding RNAs}{13}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Profiling of repetetive regions}{14}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.5}Profiling of repetetive regions}{13}{subsubsection.3.2.5}
 \contentsline {subsubsection}{\numberline {3.2.6}User Custom gff files}{14}{subsubsection.3.2.6}
 \contentsline {subsubsection}{\numberline {3.2.7}Genome tracks visualisation}{14}{subsubsection.3.2.7}
 \contentsline {subsubsection}{\numberline {3.2.8}Search enriched regions}{15}{subsubsection.3.2.8}
@@ -43,10 +43,18 @@
 \contentsline {subsection}{\numberline {6.2}RepeatMasker annotation}{27}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}miRNA annotation}{27}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}tRNA annotation}{28}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Other annotations}{28}{subsection.6.5}
-\contentsline {section}{\numberline {7}Installation of additional softwares}{28}{section.7}
-\contentsline {section}{\numberline {8}FAQ}{31}{section.8}
-\contentsline {subsection}{\numberline {8.1}Enabling CGI using XAMPP}{31}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Working with a new genome}{32}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}other FAQs}{32}{subsection.8.3}
-\contentsline {section}{Bibliography}{32}{subsection.8.3}
+\contentsline {subsection}{\numberline {6.5}piRNA annotation}{28}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Other annotations}{28}{subsection.6.6}
+\contentsline {section}{\numberline {7}Installation of additional softwares}{29}{section.7}
+\contentsline {section}{\numberline {8}ncPRO-seq on Galaxy}{32}{section.8}
+\contentsline {subsection}{\numberline {8.1}ncPRO-seq dependencie and Galaxy settings}{32}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}ncPRO-seq installation with Galaxy Tool Shed}{33}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}ncPRO-seq tools}{33}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Alignment and QC}{33}{subsubsection.8.3.1}
+\contentsline {subsubsection}{\numberline {8.3.2}Annotation}{34}{subsubsection.8.3.2}
+\contentsline {subsubsection}{\numberline {8.3.3}Profiling}{34}{subsubsection.8.3.3}
+\contentsline {section}{\numberline {9}FAQ}{35}{section.9}
+\contentsline {subsection}{\numberline {9.1}Enabling CGI using XAMPP}{35}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Working with a new genome}{35}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}other FAQs}{35}{subsection.9.3}
+\contentsline {section}{Bibliography}{35}{subsection.9.3}

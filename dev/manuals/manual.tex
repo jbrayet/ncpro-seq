@@ -21,6 +21,9 @@
 \setlength{\textheight}{22cm} 
 \usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
 
+\usepackage{alltt}
+\renewcommand{\ttdefault}{txtt}
+
 \graphicspath{{pic/}}
 %\setcounter{tocdepth}{2}
 \usepackage{multirow}
@@ -30,10 +33,10 @@
 \usepackage[absolute]{textpos} 
 
 % Title Page
-\title{\vspace{7cm}\textbf{ncPRO-seq}\\\normalsize  Annotation and profiling of ncRNAs in sRNA-seq data\\\vspace{1cm}\large{\bf{User Guide}}\\\vspace{1cm} \normalsize ncPRO-seq version 1.6.5}
+\title{\vspace{7cm}\textbf{ncPRO-seq}\\\normalsize  Annotation and profiling of ncRNAs in sRNA-seq data\\\vspace{1cm}\large{\bf{User Guide}}\\\vspace{1cm} \normalsize \ncpip{}}
 \date{\normalsize Last updated : \today}
 \author{Chong-Jian Chen \& Nicolas Servant}
-\def \ncpip{ncPRO-seq}
+\def \ncpip{ncPRO-seq 1.6.5}
 
 \clearpage
 \begin{document}
@@ -82,7 +85,7 @@ The \ncpip{} pipeline requires the following additional softwares. Please refer 
 \begin{itemize}
  \item The \href{http://bowtie-bio.sourceforge.net/manual.shtml}{ Bowtie Aligner} ($<$v2.0) \cite{Langmead2009} to align the reads from smallRNA-seq data.
 
- \item The \href{http://www.r-project.org/}{ R} ($>$v2.12.0) \cite{Rcitation}.
+ \item The \href{http://www.r-project.org/}{ R} ($>=$v3.2.3) \cite{Rcitation}.
 
  \item The R and \href{http://www.bioconductor.org/}{ BioConductor} \cite{Robert2004} packages:  \href{http://www.bioconductor.org/packages/2.2/bioc/html/seqLogo.html}{ seqLogo} \cite{OliverseqLogo}, \href{http://www.bioconductor.org/packages/2.6/bioc/html/girafe.html}{ girafe} \cite{Joern2010},  \href{http://cran.r-project.org/web/packages/RColorBrewer/index.html}{ RColorBrewer} \cite{Erich2011}, \href{http://ggplot2.org/}{ ggplot2} \cite{Wickham2009}, \href{http://cran.r-project.org/web/packages/reshape2/index.html}{ reshape2} \cite{Wickham2007} and \href{http://cran.r-project.org/web/packages/gridExtra/}{ gridExtra} \cite{Auguie2012}.
 
@@ -588,6 +591,15 @@ Example of "attributes" column in mature miRNA annotation file:\\\\
 The tRNA annotation file is generated from tRNA gtf files from UCSC \cite{Dreszer2012} using custom scripts, detailed in readme file in annotation/prepareAnnotation folder. There is a feature in "attributes" column called "Type\_Name" which indicate the type of tRNA. Example of "attributes" column: \\\\
 \verb|ID=chr1.tRNA1547;Type_Name=tRNA-GluTTC|
 
+\subsection{piRNA annotation}
+\label{subsection:pirna}
+The piRNA annotation file is generated from piRNA bed files from piRBase \cite{Zhang2014}. Actually, hg19 and rn5 have piRNA annotation. mm9 piRNA annotation file contains piRNA and piRNA clusters because piRBase gives 47,286,428 piRNA for mm9. It's too much for a normal use of ncPRO-seq. Clusters are created with this command line : \verb|bedtools merge -s -i piRBase.bed -d 50 -nms|\\\\
+Example of "attributes" column in piRNA annotation file (hg19 and rn5):\\\\
+\verb|Name=piR-rno-26536|\\\\
+Example of "attributes" column in piRNA clusters annotation file (mm9):\\\\
+\verb|Name=cluster3|\\
+\verb|Name=piR-mmu-17018147|
+
 \subsection{Other annotations}
 
 While "nc" in the name implies a focus on noncoding RNAs, \ncpip{} is far more and can be used to analyse any annotation files in gff3 format like splice site and promoter region of protein coding gene. Note that these annotation files should contain one of the following three features in "attributes" column to indicate the names of items: Name, Alias or ID. \\\\
@@ -610,7 +622,7 @@ We give some simple outlines to install additional softwares required by \ncpip{
 The indexes of the chosen genome reference need to be prepared beforehand and set in the environment variable \verb|BOWTIE_INDEXES|
 \end{itemize}
 
- \item The \href{http://www.r-project.org/}{ R} ($>$v2.12.0) \cite{Rcitation} and \href{http://www.bioconductor.org/}{ BioConductor} \cite{Robert2004} softwares.
+ \item The \href{http://www.r-project.org/}{ R} ($>=$v3.2.3) \cite{Rcitation} and \href{http://www.bioconductor.org/}{ BioConductor} \cite{Robert2004} softwares.
 
 \begin{itemize}
  \item There are several ways to install R program detailed in \href{http://cran.r-project.org/doc/manuals/R-admin.html#}{ R-project site}. For Mac OS X, the easiest way is to download the latest installer package (R-*.pkg) for Mac OS X, which can be installed by double clicking.  For Linux, we just show how to build R from the source.  Users can choose a \href{http://cran.r-project.org/mirrors.html}{ site mirror} close to you to download the latest R source code (R-*.tar.gz) for all platforms. You need to unpack the file and go to the unpacked directory at the shell prompt, use
@@ -730,7 +742,7 @@ OR
 \section{ncPRO-seq on Galaxy}
 \label{subsection:additional}
 
-You can install ncPRO-seq on your Galaxi instance. 
+You can install ncPRO-seq on your Galaxy \cite{Goecks2010} \cite{Blankenberg2010} \cite{Giardine2005} instance. 
 
 \subsection{ncPRO-seq dependencie and Galaxy settings}
 
@@ -745,6 +757,135 @@ To install ncPRO-seq on your Galaxy instance, you must install Docker tool. It's
 \end{itemize}
 
  \item Galaxy settings to use Docker images:
+
+\begin{itemize}
+ \item To display Tool Shed tools, you must change a parameter in \verb|galaxy/config/galaxy.ini|
+\begin{verbatim}
+tool_dependency_dir = ../tool_dependencies
+\end{verbatim}
+ \item To use Docker images, add new "destination" tag in \verb|galaxy/config/job_conf.xml|
+\begin{alltt}
+<?xml version="1.0"?>
+<!-- A sample job config that explicitly configures job running \\ the way it is configured by default (if there is no explicit config). -->
+<job_conf>
+    <plugins>
+        <plugin id="local" type="runner" \\ load="galaxy.jobs.runners.local:LocalJobRunner" workers="4"/>
+    </plugins>
+    <handlers>
+        <handler id="main"/>
+    </handlers>
+    <destinations default="docker_local">
+       <destination id="local" runner="local"/>
+\textbf{       <destination id="docker_local" runner="local">}
+\textbf{            <param id="docker_enabled">true</param>}
+\textbf{            <param id="docker_memory">2G</param>}
+\textbf{            <param id="docker_sudo">false</param>}
+\textbf{            <param id="docker_net">bridge</param>}
+\textbf{       </destination>}
+    </destinations>
+</job_conf>
+
+\end{alltt}
+\end{itemize}
+
+\subsection{ncPRO-seq installation with Galaxy Tool Shed}
+
+\begin{itemize}
+ \item Go in \textbf{Admin} section
+ \item In \textbf{Tools and Tool Shed} part, click on \textbf{Search Tool Shed}
+ \item Click on \textbf{Galaxy Main Tool Shed}
+ \item In search bar, write \textbf{ncproseq} and press enter$ \hookleftarrow $
+ \item Select \ncpip{} and \textbf{Preview and install}
+ \item Click on \textbf{Install to Galaxy}
+ \item Add new tool panel section or select existing tool panel section and click on \textbf{Install}
+\end{itemize}
+
+When "Status" are \textbf{Installed} (refresh page), ncPRO-seq tools are on your Galaxy instance. You have three tools: Alignment and QC, Annotation and Profiling.
+
+\subsection{ncPRO-seq tools}
+
+\subsubsection{Alignment and QC}
+
+Input : fastq or bam file(s) (maximum: 4)\\
+Output : 
+\begin{itemize}
+ \item report (html, pdf or both)
+ \item log file
+ \item optional : bam file (annotation overview using the RFAM and RepeatMasker database)
+\end{itemize}
+
+ncPRO-seq steps realized by Alignment and QC tool:
+\begin{center}
+\rowcolors{1}{white}{gray!20}
+\begin{longtable}{|p{8cm}|p{8cm}|}
+\hline \rowcolor{gray} 
+\textbf{Alignment and QC steps} &	\textbf{Description}\tabularnewline 
+processRead (if input file is a fastq file) &	calculate read length distribution, median quality score for each postion, and group reads\\
+processBam (if input file is a bam file) &	processed and group reads from bam files\\
+mapGenome (if Run Alignment = Yes) &	run Bowtie for genome mapping\\
+mapGenomeStat (if Run Alignment = Yes) &	compute number of mapped reads and unmapped reads in the genome\\
+mapAnnOverview  (if Run Alignment = Yes) & compute overview of reads annotation\\
+overviewRmsk  (if Generate the annotation overview = Yes) &	compute read coverage for each repeats family\\
+overviewRfam  (if Generate the annotation overview = Yes) &	compute read coverage for each ncRNA family\\
+html\_builder &	build the html report file\\
+pdf\_builder & build the pdf report file\\
+\hline
+\caption{Description of Alignment and QC steps}
+\label{tab:configureoptions}
+\end{longtable}
+\end{center}
+
+\subsubsection{Annotation}
+
+Input : bam file\\
+Output : 
+\begin{itemize}
+ \item annotation file (RPM normalization or not)
+ \item log file
+ \item optional : annotation file with all miRBase miRNA (RPM normalization or not)
+ \item optional : IGV tracks for ncRNA visualisation
+\end{itemize}
+
+ncPRO-seq steps realized by Annotation tool:
+\begin{center}
+\rowcolors{1}{white}{gray!20}
+\begin{longtable}{|p{8cm}|p{8cm}|}
+\hline \rowcolor{gray} 
+\textbf{Annotation steps} &	\textbf{Description}\tabularnewline 
+processBam (if bam file isn't grouped) &	processed and group reads from bam files\\
+generateNcgff &	create gff file for special ncrna family\\
+ncrnaProcess&	ncRNA family analyses, including read coverage, read length distribution, read coverage in subfamilies, and sequence logo\\
+ncrnaTracks (if Create IGV tracks = Yes) & genreate ucsc tracks for ncrna visualization\\
+\hline
+\caption{Description of Annotation steps}
+\label{tab:configureoptions}
+\end{longtable}
+\end{center}
+
+\subsubsection{Profiling}
+
+Input : bam file\\
+Output : 
+\begin{itemize}
+ \item png of the annotation profiling (distinct reads)
+ \item png of the annotation profiling (abundant reads)
+ \item log file
+\end{itemize}
+
+ncPRO-seq steps realized by Profiling tool:
+\begin{center}
+\rowcolors{1}{white}{gray!20}
+\begin{longtable}{|p{8cm}|p{8cm}|}
+\hline \rowcolor{gray} 
+\textbf{Profiling steps} &	\textbf{Description}\tabularnewline 
+processBam (if bam file isn't grouped) &	processed and group reads from bam files\\
+generateNcgff &	create gff file for special ncrna family\\
+ncrnaProcess&	ncRNA family analyses, including read coverage, read length distribution, read coverage in subfamilies, and sequence logo\\
+\hline
+\caption{Description of Profiling steps}
+\label{tab:configureoptions}
+\end{longtable}
+\end{center}
 
 \section{FAQ}
 \subsection{Enabling CGI using XAMPP}

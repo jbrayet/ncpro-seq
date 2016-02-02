@@ -15,6 +15,12 @@ Oliver Bembom.
 \newblock {\em seq{L}ogo: {S}equence logos for {DNA} sequence alignments}.
 \newblock R package version 1.18.0.
 
+\bibitem{Blankenberg2010}
+Daniel Blankenberg, Gregory~Von Kuster, Nathaniel Coraor, Guruprasad Ananda,
+  Ross Lazarus, Mary Mangan, Anton Nekrutenko, and James Taylor.
+\newblock Galaxy: A web-based genome analysis tool for experimentalists.
+\newblock {\em Current protocols in molecular biology}, pages 19--10, 2010.
+
 \bibitem{Brodersen2006}
 P.~Brodersen and O.~Voinnet.
 \newblock {{T}he diversity of {R}{N}{A} silencing pathways in plants}.
@@ -46,6 +52,19 @@ Robert~C Gentleman, Vincent~J. Carey, Douglas~M. Bates, and {others}.
 M.~Ghildiyal and P.~D. Zamore.
 \newblock {{S}mall silencing {R}{N}{A}s: an expanding universe}.
 \newblock {\em Nat. Rev. Genet.}, 10:94--108, Feb 2009.
+
+\bibitem{Giardine2005}
+Belinda Giardine, Cathy Riemer, Ross~C Hardison, Richard Burhans, Laura
+  Elnitski, Prachi Shah, Yi~Zhang, Daniel Blankenberg, Istvan Albert, James
+  Taylor, Webb~C Miller, W~James Kent, and Anton Nekrutenko.
+\newblock Galaxy: a platform for interactive large-scale genome analysis.
+\newblock {\em Genome research}, 15(10):1451--1455, 2005.
+
+\bibitem{Goecks2010}
+Jeremy Goecks, Anton Nekrutenko, James Taylor, and The~Galaxy Team.
+\newblock Galaxy: a comprehensive approach for supporting accessible,
+  reproducible, and transparent computational research in the life sciences.
+\newblock {\em Genome Biol}, 11(8):R86, 2010.
 
 \bibitem{Kozomara2011}
 A.~Kozomara and S.~Griffiths-Jones.
@@ -112,5 +131,11 @@ Hadley Wickham.
 Hadley Wickham.
 \newblock {\em ggplot2: elegant graphics for data analysis}.
 \newblock Springer New York, 2009.
+
+\bibitem{Zhang2014}
+Peng Zhang, Xiaohui Si, Geir Skogerbø, Jiajia Wang, Dongya Cui, Yongxing Li,
+  Xubin Sun, Li~Liu, Baofa Sun, Runsheng Chen, Shunmin He, and Da-Wei Huang.
+\newblock pirbase: a web resource assisting pirna functional study.
+\newblock {\em Database}, 2014, 2014.
 
 \end{thebibliography}

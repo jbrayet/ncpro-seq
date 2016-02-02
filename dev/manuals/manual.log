@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.10)  13 FEB 2015 11:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.10)  2 FEB 2016 11:08
 entering extended mode
  %&-line parsing enabled.
 **manual.tex
@@ -261,6 +261,9 @@ Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
 \Fld@listcount=\count107
 )
+(/usr/share/texmf-texlive/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
 (/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen118
 )
@@ -363,24 +366,36 @@ LaTeX Warning: Label `fig:web3' multiply defined.
 
 LaTeX Warning: Label `tab:configureoptions' multiply defined.
 
+
+LaTeX Warning: Label `subsection:additional' multiply defined.
+
+
+LaTeX Warning: Label `tab:configureoptions' multiply defined.
+
+
+LaTeX Warning: Label `tab:configureoptions' multiply defined.
+
+
+LaTeX Warning: Label `tab:configureoptions' multiply defined.
+
 )
 \openout1 = `manual.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 42.
  (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -397,7 +412,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \MPnumerator=\count122
 \everyMPtoPDFconversion=\toks28
 )
-Package hyperref Info: Link coloring ON on input line 39.
+Package hyperref Info: Link coloring ON on input line 42.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
@@ -406,8 +421,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
  (./manual.out)
 (./manual.out)
 \@outlinefile=\write3
@@ -415,22 +430,22 @@ LaTeX Info: Redefining \pageref on input line 39.
 
 \AtBeginShipoutBox=\box35
  ABD: EveryShipout initializing macros
-<pic/ncPRO_logo.png, id=206, 220.825pt x 100.375pt>
+<pic/ncPRO_logo.png, id=238, 220.825pt x 100.375pt>
 File: pic/ncPRO_logo.png Graphic file (type png)
  <use pic/ncPRO_logo.png>
-Overfull \hbox (91.30196pt too wide) in paragraph at lines 44--45
+Overfull \hbox (91.30196pt too wide) in paragraph at lines 47--48
  [] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
-LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -440,7 +455,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pic/ncPRO_logo.png (PNG 
 copy)>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
  (./manual.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
@@ -450,86 +465,77 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 \openout4 = `manual.toc'.
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 62.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 65.
 (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
  [4
 
 ] [5]
-Overfull \hbox (9.74927pt too wide) in paragraph at lines 110--111
-\OT1/ptm/m/n/12 from source-forge (http://sourceforge.net/projects/ncproseq/fil
-es/). For ex-am-ple, we choose source
+Overfull \hbox (21.59444pt too wide) in paragraph at lines 113--114
+\OT1/ptm/m/n/12 choose source code \OT1/ptm/b/n/12 ncPRO-seq.v1.6.1.tar.gz \OT1
+/ptm/m/n/12 from src folder and an-no-ta-tion file \OT1/ptm/b/n/12 mouse[]mm9.t
+ar.gz
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 111.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 114
+.
+(/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
 ) [6]
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
+Underfull \hbox (badness 1314) in paragraph at lines 152--152
+[]|\OT1/ptm/m/n/12 0/1. If 1, the web in-ter-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []|\OT1/ptm/m/n/12 HTML in-stal-la-tion folder.
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 151--151
+Underfull \hbox (badness 1048) in paragraph at lines 154--154
 \OT1/ptm/m/n/12 Have to be un-der the web
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 153--153
+Underfull \hbox (badness 1303) in paragraph at lines 156--156
 []|\OT1/ptm/m/n/12 Results path for lo-cal web
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 []|\OT1/ptm/m/n/12 -m ae -M
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 \OT1/ptm/m/n/12 bioinfo.ncproseq@curie.fr -j
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 158--158
+Underfull \hbox (badness 1629) in paragraph at lines 161--161
 []|\OT1/ptm/m/n/12 Absolute path to R bi-nary
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 159--159
+Underfull \hbox (badness 1275) in paragraph at lines 162--162
 []|\OT1/ptm/m/n/12 Absolute path to awk ex-e-
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 162--162
+Underfull \hbox (badness 3271) in paragraph at lines 165--165
 []|\OT1/ptm/m/n/12 Installation folder of Bed-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[]|\OT1/ptm/m/n/12 /home/Apps/BEDTools-Version-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]|\OT1/ptm/m/n/12 Utilities used to cre-ate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
-[]|\OT1/ptm/m/n/12 Installation folder of the
  []
 
 
@@ -538,292 +544,414 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[]|\OT1/ptm/m/n/12 Utilities used to cre-ate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]|\OT1/ptm/m/n/12 Installation folder of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+[]|\OT1/ptm/m/n/12 /home/Apps/BEDTools-Version-
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 171--171
 []|\OT1/ptm/m/n/12 Optional - mailx ex-cutable
  []
 
 
-Overfull \hbox (9.14722pt too wide) in alignment at lines 146--169
+Overfull \hbox (9.14722pt too wide) in alignment at lines 149--172
  [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 169
+Underfull \vbox (badness 10000) detected at line 172
  []
 
 
-Overfull \hbox (9.14722pt too wide) in alignment at lines 169--172
+Overfull \hbox (9.14722pt too wide) in alignment at lines 172--175
  [] [] [] 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 201--202
+Underfull \hbox (badness 1590) in paragraph at lines 204--205
 []|\OT1/ptm/m/n/12 Annotation against pre-miRNAs from miR-
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 202--203
+Underfull \hbox (badness 1953) in paragraph at lines 205--206
 []|\OT1/ptm/m/n/12 List of the RFAM ncRNA(s) to fo-cus on
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 203--204
+Underfull \hbox (badness 1953) in paragraph at lines 206--207
 []|\OT1/ptm/m/n/12 List of the RFAM ncRNA(s) to fo-cus on
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 204--205
+Underfull \hbox (badness 1147) in paragraph at lines 207--208
 []|\OT1/ptm/m/n/12 List of the repet-i-tive el-e-ments to fo-cus on
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 205--206
+Underfull \hbox (badness 1147) in paragraph at lines 208--209
 []|\OT1/ptm/m/n/12 List of the repet-i-tive el-e-ments to fo-cus on
  []
 
 
-Underfull \vbox (badness 10000) detected at line 207
+Underfull \vbox (badness 10000) detected at line 210
  []
 
-[8] [9] [10] <pic/web_1.png, id=388, 1174.97032pt x 985.3587pt>
+[8] [9] [10] <pic/web_1.png, id=428, 1174.97032pt x 985.3587pt>
 File: pic/web_1.png Graphic file (type png)
 
-<use pic/web_1.png> <pic/web_2.png, id=391, 1180.41pt x 512.88387pt>
+<use pic/web_1.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pic/web_2.png, id=431, 1180.41pt x 512.88387pt>
 File: pic/web_2.png Graphic file (type png)
+ <use pic/web_2.png>
 
-<use pic/web_2.png> [11 <./pic/web_1.png (PNG copy)>]
-<pic/web_3.png, id=399, 1178.8558pt x 103.35387pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11] <pic/web_3.png, id=441, 1178.8558pt x 103.35387pt>
 File: pic/web_3.png Graphic file (type png)
- <use pic/web_3.png> [12 <./pic/web_2.png (PNG copy)>] <pic/web_4.png, id=409, 
-1178.8558pt x 463.14967pt>
+ <use pic/web_3.png>
+[12 <./pic/web_1.png (PNG copy)>]
+<pic/web_4.png, id=449, 1178.8558pt x 463.14967pt>
 File: pic/web_4.png Graphic file (type png)
+ <use pic/web_4.png>
 
-<use pic/web_4.png> <pic/web_5.png, id=411, 1179.6329pt x 202.04517pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pic/web_5.png, id=451, 1179.6329pt x 202.04517pt>
 File: pic/web_5.png Graphic file (type png)
+ <use pic/web_5.png>
 
-<use pic/web_5.png> [13 <./pic/web_3.png (PNG copy)> <./pic/web_4.png (PNG copy
-)>] <pic/web_6.png, id=423, 1179.6329pt x 179.50935pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./pic/web_2.png (PNG copy)> <./pic/web_3.png (PNG copy)>]
+<pic/web_6.png, id=464, 1179.6329pt x 179.50935pt>
 File: pic/web_6.png Graphic file (type png)
  <use pic/web_6.png>
-<pic/web_7.png, id=426, 1179.6329pt x 351.24774pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pic/web_7.png, id=467, 1179.6329pt x 351.24774pt>
 File: pic/web_7.png Graphic file (type png)
- <use pic/web_7.png> [14 <./pic/web_5.png (PNG copy)> <./pic/web_6.png (PNG cop
+ <use pic/web_7.png> [14 <./pic/web_4.png (PNG copy)> <./pic/web_5.png (PNG cop
 y)>]
-<pic/web_8.png, id=436, 1192.84355pt x 669.85742pt>
+<pic/web_8.png, id=476, 1192.84355pt x 669.85742pt>
 File: pic/web_8.png Graphic file (type png)
  <use pic/web_8.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15 <./pic/web_7.png (PNG copy)>]
-Overfull \hbox (20.30295pt too wide) in paragraph at lines 337--337
-[]\OT1/pcr/m/n/12 $ MY_INSTALLATION_DIR/bin/ncPRO-seq -c config-ncrna.txt -s pr
-ocessRead[] 
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 347--348
+[15 <./pic/web_6.png (PNG copy)> <./pic/web_7.png (PNG copy)>]
+Underfull \hbox (badness 1237) in paragraph at lines 350--351
 []|\OT1/ptm/m/n/12 compute num-ber of mapped reads and un-
  []
 
 
-Underfull \vbox (badness 10000) detected at line 361
+Underfull \vbox (badness 10000) detected at line 364
  []
 
 [16 <./pic/web_8.png (PNG copy)>] [17]
-<pic/web_9.png, id=457, 1181.1871pt x 1297.75162pt>
+<pic/web_9.png, id=498, 1181.1871pt x 1297.75162pt>
 File: pic/web_9.png Graphic file (type png)
  <use pic/web_9.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18] <pic/pipeline.png, id=463, 737.154pt x 553.1064pt>
+[18] <pic/pipeline.png, id=504, 737.154pt x 553.1064pt>
 File: pic/pipeline.png Graphic file (type png)
  <use pic/pipeline.png>
+Overfull \hbox (8.85103pt too wide) in paragraph at lines 393--399
+\OT1/ptm/m/n/12 The work-flow of the ncPRO-seq 1.6.5 pipeline con-sists of five
+ main com-po-nents: \OT1/ptm/b/n/12 in-put pre-processing\OT1/ptm/m/n/12 ,
+ []
+
 [19 <./pic/web_9.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 400--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
 
  []
 
 [20 <./pic/pipeline.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 407--409
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 484--486
+Underfull \hbox (badness 10000) in paragraph at lines 487--489
 
  []
 
 [22]
-Overfull \hbox (4.50192pt too wide) in paragraph at lines 487--488
+Overfull \hbox (4.50192pt too wide) in paragraph at lines 490--491
 []\OT1/ptm/m/n/12 Due to the in-ac-cu-rate pro-cess-ing of pre-cur-sor miR-NAs 
 by Dicer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
+Underfull \hbox (badness 10000) in paragraph at lines 512--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
+Underfull \hbox (badness 10000) in paragraph at lines 512--515
 
  []
 
-[23] <pic/scaling.png, id=515, 534.798pt x 166.9437pt>
+[23] <pic/scaling.png, id=556, 534.798pt x 166.9437pt>
 File: pic/scaling.png Graphic file (type png)
  <use pic/scaling.png>
-Underfull \hbox (badness 10000) in paragraph at lines 523--525
+Underfull \hbox (badness 10000) in paragraph at lines 526--528
 
  []
 
 [24 <./pic/scaling.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 530--534
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--534
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--534
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
 
  []
 
 [25]
-Overfull \hbox (0.91888pt too wide) in paragraph at lines 543--544
-\OT1/ptm/m/n/12 thereby iden-tify re-gions with sig-nif-i-cant num-bers of mapp
-ed reads ([]\OT1/pcr/m/n/12 PVAL_CUTOFF\OT1/ptm/m/n/12 , e.g. 0.001) 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Overfull \hbox (23.25166pt too wide) in paragraph at lines 565--566
+\OT1/ptm/m/n/12 ($\OML/cmm/m/it/12 >\OT1/cmr/m/n/12 = 15$\OT1/ptm/m/n/12 ) mode
+l or-gan-isms, in-clud-ing Hu-man,Mouse,Rat, Ara-bidop-sis, Caenorhab-di-tis el
+-e-gans, Drosophila
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--572
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Underfull \hbox (badness 10000) in paragraph at lines 569--572
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 572--577
+Underfull \hbox (badness 10000) in paragraph at lines 575--580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--577
+Underfull \hbox (badness 10000) in paragraph at lines 575--580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--577
+Underfull \hbox (badness 10000) in paragraph at lines 575--580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 583--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 583--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 583--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 583--588
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 588--590
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--599
+Underfull \hbox (badness 10000) in paragraph at lines 596--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--599
+Underfull \hbox (badness 10000) in paragraph at lines 596--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--599
+Underfull \hbox (badness 10000) in paragraph at lines 596--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--599
+Underfull \hbox (badness 10000) in paragraph at lines 596--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--599
+Underfull \hbox (badness 10000) in paragraph at lines 605--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--611
+Underfull \hbox (badness 10000) in paragraph at lines 605--611
 
  []
 
-[28] [29] [30] [31]
-Overfull \hbox (11.95755pt too wide) in paragraph at lines 751--752
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--611
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 621--623
+
+ []
+
+[29] [30] [31]
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.751  \item T
+              he \href{https://www.docker.com}{ Docker} program:
+? 
+
+Underfull \hbox (badness 10000) detected at line 751
+[][]
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.759  \item G
+              alaxy settings to use Docker images:
+? 
+
+Underfull \hbox (badness 10000) detected at line 759
+[][]
+ []
+
+
+Overfull \hbox (5.57697pt too wide) in paragraph at lines 769--769
+ \OT1/txtt/m/n/12 the way it is configured by default (if there is no explicit 
+config). -->[] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/txtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/txtt/b/n' tried instead on input line 779.
+[32]
+Underfull \hbox (badness 1237) in paragraph at lines 826--827
+[]|\OT1/ptm/m/n/12 compute num-ber of mapped reads and un-
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 828--828
+[]|\OT1/ptm/m/n/12 overviewRmsk (if Gen-er-ate the an-no-ta-tion
+ []
+
+
+Underfull \hbox (badness 4242) in paragraph at lines 829--829
+[]|\OT1/ptm/m/n/12 overviewRfam (if Gen-er-ate the an-no-ta-tion
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 835
+ []
+
+
+Overfull \vbox (40.53491pt too high) has occurred while \output is active []
+
+
+[33]
+Underfull \vbox (badness 10000) detected at line 862
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 887
+ []
+
+[34]
+Overfull \hbox (11.95755pt too wide) in paragraph at lines 911--912
 []\OT1/ptm/m/n/12 create the "chrom.sizes" file of your yeast genome in MY[]INS
 TALLATION[]DIR/annotation/yeast
  []
 
-(./manual.bbl [32]) [33] (./manual.aux)
+(./manual.bbl [35] [36]) [37] (./manual.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6601 strings out of 493857
- 90472 string characters out of 1153304
- 189832 words of memory out of 3000000
- 9583 multiletter control sequences out of 15000+50000
- 25881 words of font info for 65 fonts, out of 3000000 for 9000
+ 6650 strings out of 493857
+ 91211 string characters out of 1153304
+ 191304 words of memory out of 3000000
+ 9609 multiletter control sequences out of 15000+50000
+ 25928 words of font info for 65 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,9n,36p,1393b,560s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,36p,1393b,558s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/lat
-xfont/line10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb><
-/usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-tex
-live/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on manual.pdf (33 pages, 1169259 bytes).
+xfont/line10.pfb></usr/share/texmf-texlive/fonts/type1/public/txfonts/txbtt.pfb
+></usr/share/texmf-texlive/fonts/type1/public/txfonts/txtt.pfb></usr/share/texm
+f-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on manual.pdf (37 pages, 1182569 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 140 named destinations out of 1000 (max. 500000)
- 469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 773 PDF objects out of 1000 (max. 8388607)
+ 159 named destinations out of 1000 (max. 500000)
+ 533 words of extra memory for PDF output out of 10000 (max. 10000000)
 

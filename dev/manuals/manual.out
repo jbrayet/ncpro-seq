@@ -5,7 +5,7 @@
 \BOOKMARK [2][-]{subsection.2.1}{Hardware}{section.2}
 \BOOKMARK [2][-]{subsection.2.2}{Operating system}{section.2}
 \BOOKMARK [2][-]{subsection.2.3}{Required softwares}{section.2}
-\BOOKMARK [2][-]{subsection.2.4}{Installation of ncPRO-seq}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Installation of ncPRO-seq 1.6.5}{section.2}
 \BOOKMARK [1][-]{section.3}{How to use it ?}{}
 \BOOKMARK [2][-]{subsection.3.1}{Configuration file}{section.3}
 \BOOKMARK [2][-]{subsection.3.2}{Web interface version}{section.3}
@@ -42,10 +42,18 @@
 \BOOKMARK [2][-]{subsection.6.2}{RepeatMasker annotation}{section.6}
 \BOOKMARK [2][-]{subsection.6.3}{miRNA annotation}{section.6}
 \BOOKMARK [2][-]{subsection.6.4}{tRNA annotation}{section.6}
-\BOOKMARK [2][-]{subsection.6.5}{Other annotations}{section.6}
+\BOOKMARK [2][-]{subsection.6.5}{piRNA annotation}{section.6}
+\BOOKMARK [2][-]{subsection.6.6}{Other annotations}{section.6}
 \BOOKMARK [1][-]{section.7}{Installation of additional softwares}{}
-\BOOKMARK [1][-]{section.8}{FAQ}{}
-\BOOKMARK [2][-]{subsection.8.1}{Enabling CGI using XAMPP}{section.8}
-\BOOKMARK [2][-]{subsection.8.2}{Working with a new genome}{section.8}
-\BOOKMARK [2][-]{subsection.8.3}{other FAQs}{section.8}
-\BOOKMARK [1][-]{subsection.8.3}{Bibliography}{}
+\BOOKMARK [1][-]{section.8}{ncPRO-seq on Galaxy}{}
+\BOOKMARK [2][-]{subsection.8.1}{ncPRO-seq dependencie and Galaxy settings}{section.8}
+\BOOKMARK [2][-]{subsection.8.2}{ncPRO-seq installation with Galaxy Tool Shed}{section.8}
+\BOOKMARK [2][-]{subsection.8.3}{ncPRO-seq tools}{section.8}
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Alignment and QC}{subsection.8.3}
+\BOOKMARK [3][-]{subsubsection.8.3.2}{Annotation}{subsection.8.3}
+\BOOKMARK [3][-]{subsubsection.8.3.3}{Profiling}{subsection.8.3}
+\BOOKMARK [1][-]{section.9}{FAQ}{}
+\BOOKMARK [2][-]{subsection.9.1}{Enabling CGI using XAMPP}{section.9}
+\BOOKMARK [2][-]{subsection.9.2}{Working with a new genome}{section.9}
+\BOOKMARK [2][-]{subsection.9.3}{other FAQs}{section.9}
+\BOOKMARK [1][-]{subsection.9.3}{Bibliography}{}
